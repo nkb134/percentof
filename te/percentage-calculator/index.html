@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>శాతం కాలిక్యులేటర్ – డిస్కౌంట్, పెరుగుదల, GST, మార్కులు</title>
+<meta name="description" content="మొత్తంపై శాతం, ఒక సంఖ్య మరొక సంఖ్యలో ఎంత శాతం, డిస్కౌంట్, ధర పెరుగుదల, GST మరియు మార్కుల శాతం లెక్కించండి.">
+<link rel="canonical" href="https://percentof.in/te/percentage-calculator">
+
+<link rel="alternate" hreflang="en" href="https://percentof.in/percentage-calculator">
+<link rel="alternate" hreflang="hi" href="https://percentof.in/hi/percentage-calculator">
+<link rel="alternate" hreflang="te" href="https://percentof.in/te/percentage-calculator">
+<link rel="alternate" hreflang="ta" href="https://percentof.in/ta/percentage-calculator">
+<link rel="alternate" hreflang="bn" href="https://percentof.in/bn/percentage-calculator">
+
+<style>
+:root{--bg:#fff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--accent:#0ea5e9;--soft:#e0f2fe}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI;background:var(--surface);color:var(--text)}
+header{background:#fff;border-bottom:1px solid var(--border)}
+.header{max-width:1100px;margin:auto;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:10px;font-weight:800}
+.logo span{background:var(--accent);color:#fff;border-radius:8px;padding:6px 10px}
+.tabs a{margin-left:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--muted)}
+.tabs a.active{background:var(--accent);color:#fff}
+main{max-width:760px;margin:auto;padding:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:32px}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:14px;color:var(--muted)}
+input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);font-size:16px}
+.result{margin-top:18px;padding:16px;background:var(--surface);border-radius:12px;min-height:64px}
+.example{color:var(--muted)}
+.nl{font-size:20px;font-weight:600}
+.pill{background:var(--soft);padding:4px 10px;border-radius:999px}
+.faq-item{border-top:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-weight:600;cursor:pointer}
+.faq-a{display:none;color:var(--muted);padding-bottom:16px}
+.faq-item.open .faq-a{display:block}
+@media(max-width:640px){.inputs{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><span>%</span>Percentof</div>
+<div class="tabs">
+<a href="/percentage-calculator">English</a>
+<a href="/hi/percentage-calculator">हिन्दी</a>
+<a class="active" href="/te/percentage-calculator">తెలుగు</a>
+<a href="/ta/percentage-calculator">தமிழ்</a>
+<a href="/bn/percentage-calculator">বাংলা</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="card">
+<h2>మొత్తంపై శాతం లెక్కించండి</h2>
+<div class="inputs">
+<div><label>శాతం (%)</label><input id="p1" placeholder="ఉదా. 25"></div>
+<div><label>మొత్తం</label><input id="a1" placeholder="ఉదా. 400"></div>
+</div>
+<div class="result" id="r1"></div>
+</section>
+
+<section class="card">
+<h2>ఒక సంఖ్య మరొక సంఖ్యలో ఎంత శాతం?</h2>
+<div class="inputs">
+<div><label>విలువ</label><input id="x2" placeholder="ఉదా. 400"></div>
+<div><label>మొత్తం</label><input id="y2" placeholder="ఉదా. 500"></div>
+</div>
+<div class="result" id="r2"></div>
+</section>
+
+<section class="card">
+<h2>డిస్కౌంట్ కాలిక్యులేటర్</h2>
+<div class="inputs">
+<div><label>డిస్కౌంట్ (%)</label><input id="p3" placeholder="ఉదా. 30"></div>
+<div><label>అసలు ధర</label><input id="a3" placeholder="ఉదా. 2000"></div>
+</div>
+<div class="result" id="r3"></div>
+</section>
+
+<section class="card">
+<h2>ధర పెరుగుదల / ప్రమోషన్</h2>
+<div class="inputs">
+<div><label>పెరుగుదల (%)</label><input id="p4" placeholder="ఉదా. 15"></div>
+<div><label>అసలు ధర</label><input id="a4" placeholder="ఉదా. 1000"></div>
+</div>
+<div class="result" id="r4"></div>
+</section>
+
+<section class="card">
+<h2>శాతం పెరుగుదల లేదా తగ్గింపు</h2>
+<div class="inputs">
+<div><label>పాత విలువ</label><input id="o5" placeholder="ఉదా. 500"></div>
+<div><label>కొత్త విలువ</label><input id="n5" placeholder="ఉదా. 650"></div>
+</div>
+<div class="result" id="r5"></div>
+</section>
+
+<section class="card">
+<h2>తరచూ అడిగే ప్రశ్నలు</h2>
+
+<div class="faq-item">
+<button class="faq-q">GST ఎలా లెక్కించాలి?</button>
+<div class="faq-a">GST శాతం మరియు మూల మొత్తాన్ని నమోదు చేయండి.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">జీతం పెరుగుదల ఎలా లెక్కించాలి?</button>
+<div class="faq-a">పాత మరియు కొత్త జీతాన్ని నమోదు చేయండి.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">మార్కుల శాతం ఎలా లెక్కించాలి?</button>
+<div class="faq-a">(సాధించిన మార్కులు ÷ మొత్తం మార్కులు) × 100.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">డిస్కౌంట్ ఎలా లెక్కించాలి?</button>
+<div class="faq-a">డిస్కౌంట్ శాతం మరియు అసలు ధరను నమోదు చేయండి.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">లాభం లేదా నష్టం ఎలా లెక్కించాలి?</button>
+<div class="faq-a">ధర పెరుగుదల లేదా తగ్గింపును శాతం రూపంలో లెక్కించండి.</div>
+</div>
+
+</section>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=v=>Number(v).toFixed(2).replace(/\.00$/,'');
+
+function bind(a,b,r,fn,ex){
+const calc=()=>{
+if(!a.value&&!b.value){r.innerHTML=`<div class="example">${ex}</div>`;return;}
+if(!a.value||!b.value){r.innerHTML='';return;}
+r.innerHTML=fn();
+};
+a.oninput=b.oninput=calc;calc();
+}
+
+bind(p1,a1,r1,()=>`<div class="nl">${p1.value}% of ${a1.value} = <b>${fmt(p1.value/100*a1.value)}</b></div>`,"25% of 400 = 100");
+bind(x2,y2,r2,()=>`<div class="nl">${x2.value} అనేది ${y2.value} లో <b>${fmt(x2.value/y2.value*100)}%</b></div>`,"400 అనేది 500 లో 80%");
+bind(p3,a3,r3,()=>`<div class="nl">${p3.value}% డిస్కౌంట్ = <b>${fmt(a3.value*(1-p3.value/100))}</b></div>`,"30% డిస్కౌంట్ = 1400");
+bind(p4,a4,r4,()=>`<div class="nl">${p4.value}% పెరుగుదల = <b>${fmt(a4.value*(1+p4.value/100))}</b></div>`,"15% పెరుగుదల = 1150");
+bind(o5,n5,r5,()=>`<div class="nl">${o5.value} → ${n5.value} = <b>${fmt(Math.abs((n5.value-o5.value)/o5.value*100))}%</b></div>`,"500 → 650 = 30%");
+
+document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+</script>
+</body>
+</html>

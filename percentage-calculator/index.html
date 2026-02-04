@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percentage Calculator – Discount, Hike, GST, Marks</title>
+<meta name="description" content="Calculate percentage of an amount, what percent one number is of another, discount, price hike, GST, salary hike and marks percentage.">
+<link rel="canonical" href="https://percentof.in/percentage-calculator">
+<link rel="alternate" hreflang="en" href="https://percentof.in/percentage-calculator">
+<link rel="alternate" hreflang="hi" href="https://percentof.in/hi/percentage-calculator">
+<link rel="alternate" hreflang="te" href="https://percentof.in/te/percentage-calculator">
+<link rel="alternate" hreflang="ta" href="https://percentof.in/ta/percentage-calculator">
+<link rel="alternate" hreflang="bn" href="https://percentof.in/bn/percentage-calculator">
+<style>
+:root{--bg:#fff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--accent:#0ea5e9;--soft:#e0f2fe}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI;background:var(--surface);color:var(--text)}
+header{background:#fff;border-bottom:1px solid var(--border)}
+.header{max-width:1100px;margin:auto;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:10px;font-weight:800}
+.logo span{background:var(--accent);color:#fff;border-radius:8px;padding:6px 10px}
+.tabs a{margin-left:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--muted)}
+.tabs a.active{background:var(--accent);color:#fff}
+main{max-width:760px;margin:auto;padding:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:32px}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:14px;color:var(--muted)}
+input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);font-size:16px}
+.result{margin-top:18px;padding:16px;background:var(--surface);border-radius:12px;min-height:64px}
+.example{color:var(--muted)}
+.nl{font-size:20px;font-weight:600}
+.pill{background:var(--soft);padding:4px 10px;border-radius:999px}
+.faq-item{border-top:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-weight:600;cursor:pointer}
+.faq-a{display:none;color:var(--muted);padding-bottom:16px}
+.faq-item.open .faq-a{display:block}
+@media(max-width:640px){.inputs{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><span>%</span>Percentof</div>
+<div class="tabs">
+<a class="active" href="/percentage-calculator">English</a>
+<a href="/hi/percentage-calculator">हिन्दी</a>
+<a href="/te/percentage-calculator">తెలుగు</a>
+<a href="/ta/percentage-calculator">தமிழ்</a>
+<a href="/bn/percentage-calculator">বাংলা</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- X% of Y -->
+<section class="card">
+<h2>Find percentage of an amount</h2>
+<div class="inputs">
+<div><label>Percentage (%)</label><input id="p1" placeholder="e.g. 25"></div>
+<div><label>Amount</label><input id="a1" placeholder="e.g. 400"></div>
+</div>
+<div class="result" id="r1"></div>
+</section>
+
+<!-- What % is X of Y -->
+<section class="card">
+<h2>What percentage is one number of another?</h2>
+<div class="inputs">
+<div><label>Value</label><input id="x2" placeholder="e.g. 400"></div>
+<div><label>Total</label><input id="y2" placeholder="e.g. 500"></div>
+</div>
+<div class="result" id="r2"></div>
+</section>
+
+<!-- Discount -->
+<section class="card">
+<h2>Discount calculator</h2>
+<div class="inputs">
+<div><label>Discount (%)</label><input id="p3" placeholder="e.g. 30"></div>
+<div><label>Original price</label><input id="a3" placeholder="e.g. 2000"></div>
+</div>
+<div class="result" id="r3"></div>
+</section>
+
+<!-- Promo / Hike -->
+<section class="card">
+<h2>Price hike / promotion calculator</h2>
+<div class="inputs">
+<div><label>Increase (%)</label><input id="p4" placeholder="e.g. 15"></div>
+<div><label>Original price</label><input id="a4" placeholder="e.g. 1000"></div>
+</div>
+<div class="result" id="r4"></div>
+</section>
+
+<!-- Change -->
+<section class="card">
+<h2>Percentage increase or decrease</h2>
+<div class="inputs">
+<div><label>Original value</label><input id="o5" placeholder="e.g. 500"></div>
+<div><label>New value</label><input id="n5" placeholder="e.g. 650"></div>
+</div>
+<div class="result" id="r5"></div>
+</section>
+
+<!-- FAQs -->
+<section class="card">
+<h2>FAQs</h2>
+
+<div class="faq-item"><button class="faq-q">How do I calculate GST?</button><div class="faq-a">Enter GST rate and base amount to get GST value.</div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate salary hike?</button><div class="faq-a">Use percentage increase calculator with old and new salary.</div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate marks percentage?</button><div class="faq-a">Divide obtained marks by total marks and multiply by 100.</div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate discount?</button><div class="faq-a">Enter discount percentage and original price.</div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate profit or loss?</button><div class="faq-a">Use percentage increase or decrease based on cost and selling price.</div></div>
+
+</section>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=v=>Number(v).toFixed(2).replace(/\.00$/,'');
+
+function bind(a,b,r,fn,ex){
+const calc=()=>{
+if(!a.value&&!b.value){r.innerHTML=`<div class="example">${ex}</div>`;return;}
+if(!a.value||!b.value){r.innerHTML='';return;}
+r.innerHTML=fn();
+};
+a.oninput=b.oninput=calc;calc();
+}
+
+bind(p1,a1,r1,()=>`<div class="nl"><span class="pill">${p1.value}%</span> of <span class="pill">${a1.value}</span> is <b>${fmt(p1.value/100*a1.value)}</b></div>`,"25% of 400 is 100");
+
+bind(x2,y2,r2,()=>`<div class="nl"><span class="pill">${x2.value}</span> out of <span class="pill">${y2.value}</span> is <b>${fmt(x2.value/y2.value*100)}%</b></div>`,"400 out of 500 is 80%");
+
+bind(p3,a3,r3,()=>`<div class="nl">${p3.value}% off ${a3.value} gives <b>${fmt(a3.value*(1-p3.value/100))}</b></div>`,"30% off 2000 gives 1400");
+
+bind(p4,a4,r4,()=>`<div class="nl">${p4.value}% increase on ${a4.value} gives <b>${fmt(a4.value*(1+p4.value/100))}</b></div>`,"15% increase on 1000 gives 1150");
+
+bind(o5,n5,r5,()=>`<div class="nl">${o5.value} → ${n5.value} is <b>${fmt(Math.abs((n5.value-o5.value)/o5.value*100))}%</b></div>`,"500 → 650 is 30% increase");
+
+document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+</script>
+</body>
+</html>

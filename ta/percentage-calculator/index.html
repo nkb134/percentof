@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>சதவீத கணிப்பான் – தள்ளுபடி, உயர்வு, GST, மதிப்பெண்கள்</title>
+<meta name="description" content="ஒரு தொகையின் சதவீதம், ஒரு எண்ணின் சதவீதம், தள்ளுபடி, விலை உயர்வு, GST மற்றும் மதிப்பெண் சதவீதத்தை கணக்கிடுங்கள்.">
+<link rel="canonical" href="https://percentof.in/ta/percentage-calculator">
+<link rel="alternate" hreflang="en" href="https://percentof.in/percentage-calculator">
+<link rel="alternate" hreflang="hi" href="https://percentof.in/hi/percentage-calculator">
+<link rel="alternate" hreflang="te" href="https://percentof.in/te/percentage-calculator">
+<link rel="alternate" hreflang="ta" href="https://percentof.in/ta/percentage-calculator">
+<link rel="alternate" hreflang="bn" href="https://percentof.in/bn/percentage-calculator">
+
+<style>
+:root{--bg:#fff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--accent:#0ea5e9;--soft:#e0f2fe}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI;background:var(--surface);color:var(--text)}
+header{background:#fff;border-bottom:1px solid var(--border)}
+.header{max-width:1100px;margin:auto;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;gap:10px;font-weight:800}
+.logo span{background:var(--accent);color:#fff;border-radius:8px;padding:6px 10px}
+.tabs a{margin-left:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--muted)}
+.tabs a.active{background:var(--accent);color:#fff}
+main{max-width:760px;margin:auto;padding:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:32px}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:14px;color:var(--muted)}
+input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);font-size:16px}
+.result{margin-top:18px;padding:16px;background:var(--surface);border-radius:12px;min-height:64px}
+.example{color:var(--muted)}
+.nl{font-size:20px;font-weight:600}
+.pill{background:var(--soft);padding:4px 10px;border-radius:999px}
+.faq-item{border-top:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-weight:600;cursor:pointer}
+.faq-a{display:none;color:var(--muted);padding-bottom:16px}
+.faq-item.open .faq-a{display:block}
+@media(max-width:640px){.inputs{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><span>%</span>Percentof</div>
+<div class="tabs">
+<a href="/percentage-calculator">English</a>
+<a href="/hi/percentage-calculator">हिन्दी</a>
+<a href="/te/percentage-calculator">తెలుగు</a>
+<a class="active" href="/ta/percentage-calculator">தமிழ்</a>
+<a href="/bn/percentage-calculator">বাংলা</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="card">
+<h2>ஒரு தொகையின் சதவீதத்தை காண்க</h2>
+<div class="inputs">
+<div><label>சதவீதம் (%)</label><input id="p1" placeholder="எ.கா. 25"></div>
+<div><label>தொகை</label><input id="a1" placeholder="எ.கா. 400"></div>
+</div>
+<div class="result" id="r1"></div>
+</section>
+
+<section class="card">
+<h2>ஒரு எண்ணின் சதவீதம்</h2>
+<div class="inputs">
+<div><label>மதிப்பு</label><input id="x2" placeholder="எ.கா. 400"></div>
+<div><label>மொத்தம்</label><input id="y2" placeholder="எ.கா. 500"></div>
+</div>
+<div class="result" id="r2"></div>
+</section>
+
+<section class="card">
+<h2>தள்ளுபடி கணிப்பான்</h2>
+<div class="inputs">
+<div><label>தள்ளுபடி (%)</label><input id="p3" placeholder="எ.கா. 30"></div>
+<div><label>அசல் விலை</label><input id="a3" placeholder="எ.கா. 2000"></div>
+</div>
+<div class="result" id="r3"></div>
+</section>
+
+<section class="card">
+<h2>விலை உயர்வு / புரமோஷன்</h2>
+<div class="inputs">
+<div><label>உயர்வு (%)</label><input id="p4" placeholder="எ.கா. 15"></div>
+<div><label>அசல் விலை</label><input id="a4" placeholder="எ.கா. 1000"></div>
+</div>
+<div class="result" id="r4"></div>
+</section>
+
+<section class="card">
+<h2>சதவீத உயர்வு அல்லது குறைவு</h2>
+<div class="inputs">
+<div><label>பழைய மதிப்பு</label><input id="o5" placeholder="எ.கா. 500"></div>
+<div><label>புதிய மதிப்பு</label><input id="n5" placeholder="எ.கா. 650"></div>
+</div>
+<div class="result" id="r5"></div>
+</section>
+
+<section class="card">
+<h2>அடிக்கடி கேட்கப்படும் கேள்விகள்</h2>
+<div class="faq-item"><button class="faq-q">GST எப்படி கணக்கிடுவது?</button><div class="faq-a">GST சதவீதம் மற்றும் அடிப்படை தொகையை உள்ளிடவும்.</div></div>
+<div class="faq-item"><button class="faq-q">சம்பள உயர்வு எப்படி கணக்கிடுவது?</button><div class="faq-a">பழைய மற்றும் புதிய சம்பளத்தை உள்ளிடவும்.</div></div>
+<div class="faq-item"><button class="faq-q">மதிப்பெண் சதவீதம்?</button><div class="faq-a">பெற்ற மதிப்பெண்கள் / மொத்த மதிப்பெண்கள் × 100.</div></div>
+<div class="faq-item"><button class="faq-q">தள்ளுபடி எப்படி கணக்கிடுவது?</button><div class="faq-a">தள்ளுபடி சதவீதம் மற்றும் அசல் விலை உள்ளிடவும்.</div></div>
+<div class="faq-item"><button class="faq-q">லாபம் அல்லது இழப்பு?</button><div class="faq-a">விலை உயர்வு அல்லது குறைவு சதவீதம் கணக்கிடவும்.</div></div>
+</section>
+
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const fmt=v=>Number(v).toFixed(2).replace(/\.00$/,'');
+
+function bind(a,b,r,fn,ex){
+const calc=()=>{
+if(!a.value&&!b.value){r.innerHTML=`<div class="example">${ex}</div>`;return;}
+if(!a.value||!b.value){r.innerHTML='';return;}
+r.innerHTML=fn();
+};
+a.oninput=b.oninput=calc;calc();
+}
+
+bind(p1,a1,r1,()=>`<div class="nl">${p1.value}% of ${a1.value} = <b>${fmt(p1.value/100*a1.value)}</b></div>`,"25% of 400 = 100");
+bind(x2,y2,r2,()=>`<div class="nl">${x2.value} / ${y2.value} = <b>${fmt(x2.value/y2.value*100)}%</b></div>`,"400 out of 500 = 80%");
+bind(p3,a3,r3,()=>`<div class="nl">${p3.value}% தள்ளுபடி = <b>${fmt(a3.value*(1-p3.value/100))}</b></div>`,"30% தள்ளுபடி = 1400");
+bind(p4,a4,r4,()=>`<div class="nl">${p4.value}% உயர்வு = <b>${fmt(a4.value*(1+p4.value/100))}</b></div>`,"15% உயர்வு = 1150");
+bind(o5,n5,r5,()=>`<div class="nl">${o5.value} → ${n5.value} = <b>${fmt(Math.abs((n5.value-o5.value)/o5.value*100))}%</b></div>`,"500 → 650 = 30%");
+
+document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+</script>
+</body>
+</html>
