@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- English -->
+  <url>
+    <loc>https://percentof.in/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hindi -->
+  <url>
+    <loc>https://percentof.in/hi/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Telugu -->
+  <url>
+    <loc>https://percentof.in/te/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tamil -->
+  <url>
+    <loc>https://percentof.in/ta/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Bengali -->
+  <url>
+    <loc>https://percentof.in/bn/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
