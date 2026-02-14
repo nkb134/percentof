@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="hi">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-20Y5F7DX7X');
-</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20Y5F7DX7X');
+  </script>
 
   <!-- Title & Description (Hindi) -->
   <title>प्रतिशत कैलकुलेटर – डिस्काउंट, वृद्धि, GST, अंक</title>
@@ -28,6 +28,20 @@
   <link rel="alternate" hreflang="bn" href="https://percentof.in/bn/percentage-calculator/" />
   <link rel="alternate" hreflang="x-default" href="https://percentof.in/percentage-calculator/" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="प्रतिशत कैलकुलेटर – डिस्काउंट, वृद्धि, GST, अंक">
+  <meta property="og:description" content="राशि का प्रतिशत, किसी संख्या का प्रतिशत, डिस्काउंट, मूल्य वृद्धि, GST और अंक प्रतिशत आसानी से निकालें।">
+  <meta property="og:image" content="https://percentof.in/og-image.png">
+  <meta property="og:url" content="https://percentof.in/hi/percentage-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="hi_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="प्रतिशत कैलकुलेटर – डिस्काउंट, वृद्धि, GST, अंक">
+  <meta name="twitter:description" content="राशि का प्रतिशत, किसी संख्या का प्रतिशत, डिस्काउंट, मूल्य वृद्धि, GST और अंक प्रतिशत आसानी से निकालें।">
+  <meta name="twitter:image" content="https://percentof.in/og-image.png">
+
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -38,32 +52,11 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0ea5e9">
 
-  <!-- Styles (UNCHANGED) -->
-  <style>
-    :root{--bg:#fff;--surface:#f8fafc;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--accent:#0ea5e9;--soft:#e0f2fe}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI;background:var(--surface);color:var(--text)}
-    header{background:#fff;border-bottom:1px solid var(--border)}
-    .header{max-width:1100px;margin:auto;padding:18px;display:flex;justify-content:space-between;align-items:center}
-    .logo{display:flex;gap:10px;font-weight:800}
-    .logo span{background:var(--accent);color:#fff;border-radius:8px;padding:6px 10px}
-    .tabs a{margin-left:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);text-decoration:none;color:var(--muted)}
-    .tabs a.active{background:var(--accent);color:#fff}
-    main{max-width:760px;margin:auto;padding:24px}
-    .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:32px}
-    .inputs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    label{font-size:14px;color:var(--muted)}
-    input{width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);font-size:16px}
-    .result{margin-top:18px;padding:16px;background:var(--surface);border-radius:12px;min-height:64px}
-    .example{color:var(--muted)}
-    .nl{font-size:20px;font-weight:600}
-    .pill{background:var(--soft);padding:4px 10px;border-radius:999px}
-    .faq-item{border-top:1px solid var(--border)}
-    .faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-weight:600;cursor:pointer}
-    .faq-a{display:none;color:var(--muted);padding-bottom:16px}
-    .faq-item.open .faq-a{display:block}
-    @media(max-width:640px){.inputs{grid-template-columns:1fr}}
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -138,6 +131,7 @@
 </header>
 
 <main>
+<h1>प्रतिशत कैलकुलेटर</h1>
 
 <section class="card">
 <h2>राशि का प्रतिशत निकालें</h2>
@@ -145,7 +139,7 @@
 <div><label>प्रतिशत (%)</label><input id="p1" placeholder="उदा. 25"></div>
 <div><label>राशि</label><input id="a1" placeholder="उदा. 400"></div>
 </div>
-<div class="result" id="r1"></div>
+<div class="result" id="r1" data-example="25% का 400 = 100" data-template="<div class='nl'>{V1}% का {V2} = <b>{R}</b></div>"></div>
 </section>
 
 <section class="card">
@@ -154,7 +148,7 @@
 <div><label>मान</label><input id="x2" placeholder="उदा. 400"></div>
 <div><label>कुल</label><input id="y2" placeholder="उदा. 500"></div>
 </div>
-<div class="result" id="r2"></div>
+<div class="result" id="r2" data-example="400, 500 का 80% है" data-template="<div class='nl'>{V1}, {V2} का <b>{R}%</b> है</div>"></div>
 </section>
 
 <section class="card">
@@ -163,7 +157,7 @@
 <div><label>डिस्काउंट (%)</label><input id="p3" placeholder="उदा. 30"></div>
 <div><label>मूल कीमत</label><input id="a3" placeholder="उदा. 2000"></div>
 </div>
-<div class="result" id="r3"></div>
+<div class="result" id="r3" data-example="30% छूट पर 2000 = 1400" data-template="<div class='nl'>{V1}% छूट पर मूल्य <b>{R}</b></div>"></div>
 </section>
 
 <section class="card">
@@ -172,7 +166,7 @@
 <div><label>वृद्धि (%)</label><input id="p4" placeholder="उदा. 15"></div>
 <div><label>मूल कीमत</label><input id="a4" placeholder="उदा. 1000"></div>
 </div>
-<div class="result" id="r4"></div>
+<div class="result" id="r4" data-example="15% वृद्धि पर 1000 = 1150" data-template="<div class='nl'>{V1}% वृद्धि पर मूल्य <b>{R}</b></div>"></div>
 </section>
 
 <section class="card">
@@ -181,7 +175,7 @@
 <div><label>पुरानी राशि</label><input id="o5" placeholder="उदा. 500"></div>
 <div><label>नई राशि</label><input id="n5" placeholder="उदा. 650"></div>
 </div>
-<div class="result" id="r5"></div>
+<div class="result" id="r5" data-example="500 से 650 = 30%" data-template="<div class='nl'>{V1} से {V2} = <b>{R}%</b></div>"></div>
 </section>
 
 <section class="card">
@@ -195,26 +189,5 @@
 
 </main>
 
-<script>
-const $=id=>document.getElementById(id);
-const fmt=v=>Number(v).toFixed(2).replace(/\.00$/,'');
-
-function bind(a,b,r,fn,ex){
-const calc=()=>{
-if(!a.value&&!b.value){r.innerHTML=`<div class="example">${ex}</div>`;return;}
-if(!a.value||!b.value){r.innerHTML='';return;}
-r.innerHTML=fn();
-};
-a.oninput=b.oninput=calc;calc();
-}
-
-bind(p1,a1,r1,()=>`<div class="nl">${p1.value}% का ${a1.value} = <b>${fmt(p1.value/100*a1.value)}</b></div>`,"25% का 400 = 100");
-bind(x2,y2,r2,()=>`<div class="nl">${x2.value}, ${y2.value} का <b>${fmt(x2.value/y2.value*100)}%</b> है</div>`,"400, 500 का 80% है");
-bind(p3,a3,r3,()=>`<div class="nl">${p3.value}% छूट पर मूल्य <b>${fmt(a3.value*(1-p3.value/100))}</b></div>`,"30% छूट पर 2000 = 1400");
-bind(p4,a4,r4,()=>`<div class="nl">${p4.value}% वृद्धि पर मूल्य <b>${fmt(a4.value*(1+p4.value/100))}</b></div>`,"15% वृद्धि पर 1000 = 1150");
-bind(o5,n5,r5,()=>`<div class="nl">${o5.value} से ${n5.value} = <b>${fmt(Math.abs((n5.value-o5.value)/o5.value*100))}%</b></div>`,"500 से 650 = 30%");
-
-document.querySelectorAll('.faq-q').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
-</script>
 </body>
 </html>
