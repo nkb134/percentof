@@ -1,39 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- English -->
+  <!-- English Calculator -->
   <url>
     <loc>https://percentof.in/percentage-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Hindi -->
+  <!-- Hindi Calculator -->
   <url>
     <loc>https://percentof.in/hi/percentage-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Telugu -->
+  <!-- Telugu Calculator -->
   <url>
     <loc>https://percentof.in/te/percentage-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Tamil -->
+  <!-- Tamil Calculator -->
   <url>
     <loc>https://percentof.in/ta/percentage-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Bengali -->
+  <!-- Bengali Calculator -->
   <url>
     <loc>https://percentof.in/bn/percentage-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://percentof.in/about/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://percentof.in/privacy-policy/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://percentof.in/terms-of-service/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://percentof.in/contact/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
