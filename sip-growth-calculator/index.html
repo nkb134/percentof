@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20Y5F7DX7X');
+  </script>
+
+  <!-- Title & Description -->
+  <title>SIP Calculator – Calculate Mutual Fund SIP Returns & Growth</title>
+  <meta name="description" content="Free SIP calculator for India. Calculate future value of mutual fund SIP investments. See how your monthly investments grow with compound returns over time.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://percentof.in/sip-growth-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SIP Calculator – Calculate Mutual Fund SIP Returns & Growth">
+  <meta property="og:description" content="Free SIP calculator for India. Calculate future value of SIP investments with compound returns.">
+  <meta property="og:image" content="https://percentof.in/og-image.png">
+  <meta property="og:url" content="https://percentof.in/sip-growth-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIP Calculator – Calculate Mutual Fund SIP Returns & Growth">
+  <meta name="twitter:description" content="Free SIP calculator for India. Calculate future value of SIP investments with compound returns.">
+  <meta name="twitter:image" content="https://percentof.in/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SIP and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SIP (Systematic Investment Plan) is a method of investing a fixed amount regularly in mutual funds. It averages purchase cost over time (rupee cost averaging) and builds wealth through compounding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is SIP return calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SIP returns use compound interest formula: FV = P × ((1+r)^n - 1) / r × (1+r), where P is monthly SIP, r is monthly return rate, and n is number of months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good SIP return rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Historical returns vary by fund type: Large cap funds 10-12%, Mid cap 12-15%, Small cap 12-18%, Equity index funds 10-12%. Past returns don't guarantee future performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much will ₹5000 SIP grow in 10 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 12% annual return: ₹5,000/month for 10 years = ₹11.61 lakh approximately. Total investment = ₹6 lakh, Wealth gain = ₹5.61 lakh."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><a href="/" style="text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center"><span>%</span>Percentof</a></div>
+<div class="tabs">
+<a href="/percentage-calculator">Calculator</a>
+</div>
+</div>
+</header>
+
+<main>
+<h1>SIP Growth Calculator</h1>
+
+<!-- SIP Calculator -->
+<section class="card">
+<h2>Calculate SIP Future Value</h2>
+<div class="inputs">
+<div><label>Monthly SIP (₹)</label><input id="sipAmount" inputmode="decimal" placeholder="e.g. 5000"></div>
+<div><label>Expected Return (% per year)</label><input id="sipRate" inputmode="decimal" placeholder="e.g. 12"></div>
+<div><label>Time Period (years)</label><input id="sipYears" inputmode="decimal" placeholder="e.g. 10"></div>
+</div>
+<div class="result" id="sipResult" data-example="₹5,000/month at 12% for 10 years = ₹11,61,695" data-template="<div class='nl'>Future Value = <b>₹{R}</b></div>"></div>
+</section>
+
+<!-- Educational Content -->
+<section class="content">
+<h2>Understanding SIP Investments: Complete Guide for India</h2>
+
+<p>SIP (Systematic Investment Plan) is the most popular way to invest in mutual funds in India. By investing a fixed amount regularly, SIP helps build wealth through the power of compounding while averaging out market volatility. This guide covers everything about SIP investing for Indian investors.</p>
+
+<h3>What is SIP?</h3>
+<p>SIP is a disciplined investment method where you invest a fixed amount (as low as ₹500) at regular intervals (usually monthly) in a mutual fund scheme. Instead of timing the market with lump sum investments, SIP automates investing and benefits from rupee cost averaging.</p>
+
+<h3>How SIP Works</h3>
+<p>When you start a SIP:</p>
+<ul>
+<li>A fixed amount is auto-debited from your bank account monthly</li>
+<li>Units are purchased at the current NAV (Net Asset Value)</li>
+<li>When markets are low, you buy more units; when high, fewer units</li>
+<li>Over time, your average purchase cost evens out</li>
+<li>Returns compound as you reinvest and continue investing</li>
+</ul>
+
+<h3>The SIP Formula</h3>
+<p>Future value of SIP investments:</p>
+<ul>
+<li>FV = P × ((1+r)^n - 1) / r × (1+r)</li>
+<li>Where: P = Monthly SIP amount, r = Monthly rate of return, n = Number of months</li>
+</ul>
+<p><strong>Example:</strong> ₹10,000 SIP at 12% for 15 years:</p>
+<ul>
+<li>Monthly rate = 12 ÷ 12 ÷ 100 = 0.01</li>
+<li>Months = 15 × 12 = 180</li>
+<li>FV = ₹50,45,760 approximately</li>
+<li>Total invested = ₹18,00,000</li>
+<li>Wealth gain = ₹32,45,760</li>
+</ul>
+
+<h3>Types of Mutual Funds for SIP</h3>
+<p>Choose fund type based on your risk appetite and goals:</p>
+
+<ul>
+<li><strong>Equity Funds:</strong> Invest in stocks, higher returns (12-15%), higher risk, best for 7+ year goals</li>
+<li><strong>Debt Funds:</strong> Invest in bonds, moderate returns (6-8%), lower risk, good for 3-5 year goals</li>
+<li><strong>Hybrid Funds:</strong> Mix of equity and debt, balanced returns (9-12%), moderate risk</li>
+<li><strong>Index Funds:</strong> Track market index (Nifty/Sensex), 10-12% returns, low cost</li>
+<li><strong>ELSS:</strong> Tax-saving equity funds, 3-year lock-in, ₹1.5L tax deduction under 80C</li>
+</ul>
+
+<h3>The Power of Compounding</h3>
+<p>Time is your biggest ally in SIP investing. See how ₹10,000/month grows at 12%:</p>
+<ul>
+<li>5 years: ₹8.25 lakh (invested ₹6L)</li>
+<li>10 years: ₹23.23 lakh (invested ₹12L)</li>
+<li>15 years: ₹50.46 lakh (invested ₹18L)</li>
+<li>20 years: ₹99.91 lakh (invested ₹24L)</li>
+<li>25 years: ₹1.89 crore (invested ₹30L)</li>
+</ul>
+<p>Starting early multiplies your wealth exponentially!</p>
+
+<h3>SIP vs Lump Sum</h3>
+<p>Key differences:</p>
+<ul>
+<li><strong>SIP:</strong> Reduces timing risk, disciplined investing, suitable for regular income</li>
+<li><strong>Lump Sum:</strong> Better if you have surplus cash, more exposure to timing risk</li>
+</ul>
+<p>Mathematically, lump sum gives higher returns in rising markets, but SIP is psychologically easier and reduces risk of investing at market peaks.</p>
+
+<h3>Step-Up SIP</h3>
+<p>Increase your SIP amount annually (typically 10%) to accelerate wealth creation:</p>
+<p><strong>Example:</strong> ₹10,000 SIP with 10% annual step-up at 12% for 15 years:</p>
+<ul>
+<li>Without step-up: ₹50.46 lakh (invested ₹18L)</li>
+<li>With 10% step-up: ₹85.35 lakh (invested ₹38L)</li>
+</ul>
+
+<h3>SIP Investment Tips</h3>
+<ul>
+<li>Start early—even small amounts matter</li>
+<li>Choose direct plans for lower expense ratios</li>
+<li>Don't stop SIP during market downturns (you buy more units)</li>
+<li>Review portfolio annually but avoid frequent switching</li>
+<li>Use SIP step-up as income grows</li>
+</ul>
+
+<p>Use our calculator above to plan your SIP investments. For related calculations, visit our <a href="/percentage-calculator">percentage calculator</a> or <a href="/emi-impact-calculator">EMI calculator</a> for loan planning.</p>
+</section>
+
+<!-- FAQs -->
+<section class="card">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><button class="faq-q">What is the minimum SIP amount?</button><div class="faq-a">Most mutual funds allow SIP starting from ₹500/month. Some funds have minimums of ₹100 or ₹1,000.</div></div>
+<div class="faq-item"><button class="faq-q">Is SIP tax-free?</button><div class="faq-a">SIP returns are not tax-free. Equity funds held 1+ year: 10% LTCG above ₹1 lakh. Debt funds: taxed as per income slab. ELSS offers ₹1.5L deduction under 80C.</div></div>
+<div class="faq-item"><button class="faq-q">Can I stop SIP anytime?</button><div class="faq-a">Yes, SIP can be paused or stopped anytime without penalty (except ELSS which has 3-year lock-in). Your invested units remain in your account.</div></div>
+<div class="faq-item"><button class="faq-q">What returns can I expect from SIP?</button><div class="faq-a">Historically, equity SIPs have delivered 12-15% over 10+ years. Actual returns depend on market conditions and fund selection. Past performance doesn't guarantee future returns.</div></div>
+<div class="faq-item"><button class="faq-q">SIP or FD - which is better?</button><div class="faq-a">SIP in equity funds historically outperforms FD over long term (10+ years) but carries market risk. FD offers guaranteed but lower returns (~6-7%). Choose based on time horizon and risk appetite.</div></div>
+
+</section>
+
+<!-- Related Calculators -->
+<section class="content">
+<h2>Related Calculators</h2>
+<p>Explore more percentage and financial calculators:</p>
+<ul>
+<li><a href="/percentage-calculator">Percentage Calculator</a> – All-in-one percentage calculations</li>
+<li><a href="/emi-impact-calculator">EMI Calculator</a> – Plan your loan repayments</li>
+<li><a href="/percentage-increase-calculator">Percentage Increase Calculator</a> – Calculate growth rates</li>
+<li><a href="/salary-hike-calculator">Salary Hike Calculator</a> – Plan SIP from salary increments</li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<div class="footer">
+<div class="footer-links">
+<a href="/about/">About</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/contact/">Contact</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+<div class="footer-copy">&copy; 2025 Percentof. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>

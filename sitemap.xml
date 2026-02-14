@@ -41,6 +41,70 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- GST Calculator -->
+  <url>
+    <loc>https://percentof.in/gst-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Discount Calculator -->
+  <url>
+    <loc>https://percentof.in/discount-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Percentage Increase Calculator -->
+  <url>
+    <loc>https://percentof.in/percentage-increase-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Percentage Decrease Calculator -->
+  <url>
+    <loc>https://percentof.in/percentage-decrease-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Salary Hike Calculator -->
+  <url>
+    <loc>https://percentof.in/salary-hike-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- EMI Calculator -->
+  <url>
+    <loc>https://percentof.in/emi-impact-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- SIP Calculator -->
+  <url>
+    <loc>https://percentof.in/sip-growth-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Cashback Calculator -->
+  <url>
+    <loc>https://percentof.in/cashback-value-calculator/</loc>
+    <lastmod>2025-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- About -->
   <url>
     <loc>https://percentof.in/about/</loc>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20Y5F7DX7X');
+  </script>
+
+  <!-- Title & Description -->
+  <title>GST Calculator India – Calculate GST Amount & Total Price Online</title>
+  <meta name="description" content="Free GST calculator for India. Calculate GST amount at 5%, 12%, 18%, 28% rates. Find total price including GST or extract GST from inclusive price instantly.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://percentof.in/gst-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GST Calculator India – Calculate GST Amount & Total Price">
+  <meta property="og:description" content="Free GST calculator for India. Calculate GST amount at 5%, 12%, 18%, 28% rates instantly.">
+  <meta property="og:image" content="https://percentof.in/og-image.png">
+  <meta property="og:url" content="https://percentof.in/gst-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GST Calculator India – Calculate GST Amount & Total Price">
+  <meta name="twitter:description" content="Free GST calculator for India. Calculate GST amount at 5%, 12%, 18%, 28% rates instantly.">
+  <meta name="twitter:image" content="https://percentof.in/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate GST amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the base amount by the GST rate percentage and divide by 100. For example, 18% GST on Rs. 1000 = 1000 × 18 ÷ 100 = Rs. 180."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the GST rates in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "India has four main GST rates: 5% for essential items, 12% for standard goods, 18% for most services and goods, and 28% for luxury items and sin goods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate price including GST?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the GST amount to the base price. Total Price = Base Price + (Base Price × GST Rate ÷ 100). Or simply: Total = Base Price × (1 + GST Rate ÷ 100)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I extract GST from an inclusive price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To find GST from an inclusive price: GST Amount = Inclusive Price × GST Rate ÷ (100 + GST Rate). Base Price = Inclusive Price - GST Amount."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><a href="/" style="text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center"><span>%</span>Percentof</a></div>
+<div class="tabs">
+<a href="/percentage-calculator">Calculator</a>
+</div>
+</div>
+</header>
+
+<main>
+<h1>GST Calculator India</h1>
+
+<!-- GST Calculator -->
+<section class="card">
+<h2>Calculate GST Amount</h2>
+<div class="inputs">
+<div><label>GST Rate (%)</label><input id="gstRate" inputmode="decimal" placeholder="e.g. 18"></div>
+<div><label>Base Amount (₹)</label><input id="gstBase" inputmode="decimal" placeholder="e.g. 1000"></div>
+</div>
+<div class="result" id="gstResult" data-example="18% GST on ₹1000 = ₹180 (Total: ₹1180)" data-template="<div class='nl'>{V1}% GST on ₹{V2} = <b>₹{R}</b></div>"></div>
+</section>
+
+<!-- Educational Content -->
+<section class="content">
+<h2>Understanding GST in India: Complete Guide</h2>
+
+<p>Goods and Services Tax (GST) is a comprehensive indirect tax levied on the supply of goods and services in India. Implemented on July 1, 2017, GST replaced multiple cascading taxes levied by the central and state governments, creating a unified national market. Understanding how to calculate GST is essential for businesses, professionals, and consumers alike.</p>
+
+<h3>What is GST?</h3>
+<p>GST is a destination-based tax applied at every stage of the supply chain. Unlike the previous tax regime where taxes were levied on taxes, GST allows input tax credit, meaning businesses can offset the GST paid on purchases against the GST collected on sales. This eliminates the cascading effect and reduces the overall tax burden.</p>
+
+<h3>GST Rate Structure in India</h3>
+<p>India follows a multi-tier GST rate structure designed to ensure that essential items are taxed at lower rates while luxury goods attract higher taxes:</p>
+
+<ul>
+<li><strong>0% (Exempt):</strong> Fresh fruits, vegetables, milk, bread, salt, educational services, healthcare services</li>
+<li><strong>5% GST:</strong> Packaged food items, economy class air travel, transport services, small restaurants</li>
+<li><strong>12% GST:</strong> Computers, processed foods, business class air travel, state-run lotteries</li>
+<li><strong>18% GST:</strong> Most goods and services including electronics, financial services, restaurants with AC, telecom services</li>
+<li><strong>28% GST:</strong> Luxury cars, tobacco products, aerated drinks, five-star hotels, gambling</li>
+</ul>
+
+<h3>How to Calculate GST: Step-by-Step</h3>
+<p>Calculating GST involves two common scenarios:</p>
+
+<h4>1. Adding GST to Base Price</h4>
+<p>When you know the base price and need to find the total price including GST:</p>
+<ul>
+<li>GST Amount = Base Price × GST Rate ÷ 100</li>
+<li>Total Price = Base Price + GST Amount</li>
+</ul>
+<p><strong>Example:</strong> For a product priced at ₹5,000 with 18% GST:</p>
+<ul>
+<li>GST Amount = 5,000 × 18 ÷ 100 = ₹900</li>
+<li>Total Price = 5,000 + 900 = ₹5,900</li>
+</ul>
+
+<h4>2. Extracting GST from Inclusive Price</h4>
+<p>When you have an inclusive price and need to find the base price and GST:</p>
+<ul>
+<li>GST Amount = Inclusive Price × GST Rate ÷ (100 + GST Rate)</li>
+<li>Base Price = Inclusive Price - GST Amount</li>
+</ul>
+<p><strong>Example:</strong> For an inclusive price of ₹1,180 with 18% GST:</p>
+<ul>
+<li>GST Amount = 1,180 × 18 ÷ 118 = ₹180</li>
+<li>Base Price = 1,180 - 180 = ₹1,000</li>
+</ul>
+
+<h3>CGST and SGST vs IGST</h3>
+<p>GST in India is divided into three components:</p>
+<ul>
+<li><strong>CGST (Central GST):</strong> Collected by the central government for intra-state transactions</li>
+<li><strong>SGST (State GST):</strong> Collected by the state government for intra-state transactions</li>
+<li><strong>IGST (Integrated GST):</strong> Collected by the central government for inter-state transactions</li>
+</ul>
+<p>For intra-state sales, the GST rate is split equally between CGST and SGST. For example, 18% GST = 9% CGST + 9% SGST.</p>
+
+<h3>Input Tax Credit (ITC)</h3>
+<p>One of the significant advantages of GST is the Input Tax Credit mechanism. Businesses can claim credit for the GST paid on their purchases and use it to offset their GST liability on sales. This reduces the effective tax burden and prevents double taxation.</p>
+
+<h3>Common GST Calculation Scenarios</h3>
+<ul>
+<li><strong>Restaurant bills:</strong> Most restaurants charge 5% GST (without ITC) or 18% GST (with ITC for AC restaurants)</li>
+<li><strong>Online shopping:</strong> E-commerce platforms display prices inclusive of GST, typically 12% or 18%</li>
+<li><strong>Professional services:</strong> Lawyers, consultants, and accountants charge 18% GST</li>
+<li><strong>Real estate:</strong> Under-construction properties attract 5% GST (without ITC) or 12% GST (with ITC)</li>
+</ul>
+
+<p>Use our calculator above to quickly determine GST amounts for any transaction. For more percentage calculations, visit our <a href="/percentage-calculator">percentage calculator</a>.</p>
+</section>
+
+<!-- FAQs -->
+<section class="card">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><button class="faq-q">How do I calculate GST at 18%?</button><div class="faq-a">Multiply the base amount by 0.18 or by 18 and divide by 100. For ₹1000, GST = 1000 × 18 ÷ 100 = ₹180.</div></div>
+<div class="faq-item"><button class="faq-q">What is the GST on ₹10,000?</button><div class="faq-a">It depends on the GST rate. At 18%, GST = ₹1,800. At 12%, GST = ₹1,200. At 5%, GST = ₹500.</div></div>
+<div class="faq-item"><button class="faq-q">How do I calculate GST from total amount?</button><div class="faq-a">Use the formula: GST = Total × Rate ÷ (100 + Rate). For ₹1180 at 18%: GST = 1180 × 18 ÷ 118 = ₹180.</div></div>
+<div class="faq-item"><button class="faq-q">Is GST calculated on MRP?</button><div class="faq-a">MRP is usually inclusive of GST. The actual selling price before GST can be extracted using the reverse calculation.</div></div>
+<div class="faq-item"><button class="faq-q">How do I split GST into CGST and SGST?</button><div class="faq-a">For intra-state sales, divide the GST rate by 2. 18% GST = 9% CGST + 9% SGST.</div></div>
+
+</section>
+
+<!-- Related Calculators -->
+<section class="content">
+<h2>Related Calculators</h2>
+<p>Explore more percentage and financial calculators:</p>
+<ul>
+<li><a href="/percentage-calculator">Percentage Calculator</a> – All-in-one percentage calculations</li>
+<li><a href="/discount-calculator">Discount Calculator</a> – Calculate sale prices and savings</li>
+<li><a href="/salary-hike-calculator">Salary Hike Calculator</a> – Calculate new salary after increment</li>
+<li><a href="/emi-impact-calculator">EMI Impact Calculator</a> – See how rate changes affect your EMI</li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<div class="footer">
+<div class="footer-links">
+<a href="/about/">About</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/contact/">Contact</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+<div class="footer-copy">&copy; 2025 Percentof. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>

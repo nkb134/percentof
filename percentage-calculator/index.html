@@ -136,8 +136,8 @@
 <section class="card">
 <h2>Find percentage of an amount</h2>
 <div class="inputs">
-<div><label>Percentage (%)</label><input id="p1" placeholder="e.g. 25"></div>
-<div><label>Amount</label><input id="a1" placeholder="e.g. 400"></div>
+<div><label>Percentage (%)</label><input id="p1" inputmode="decimal" placeholder="e.g. 25"></div>
+<div><label>Amount</label><input id="a1" inputmode="decimal" placeholder="e.g. 400"></div>
 </div>
 <div class="result" id="r1" data-example="25% of 400 is 100" data-template="<div class='nl'><span class='pill'>{V1}%</span> of <span class='pill'>{V2}</span> is <b>{R}</b></div>"></div>
 </section>
@@ -146,8 +146,8 @@
 <section class="card">
 <h2>What percentage is one number of another?</h2>
 <div class="inputs">
-<div><label>Value</label><input id="x2" placeholder="e.g. 400"></div>
-<div><label>Total</label><input id="y2" placeholder="e.g. 500"></div>
+<div><label>Value</label><input id="x2" inputmode="decimal" placeholder="e.g. 400"></div>
+<div><label>Total</label><input id="y2" inputmode="decimal" placeholder="e.g. 500"></div>
 </div>
 <div class="result" id="r2" data-example="400 out of 500 is 80%" data-template="<div class='nl'><span class='pill'>{V1}</span> out of <span class='pill'>{V2}</span> is <b>{R}%</b></div>"></div>
 </section>
@@ -156,8 +156,8 @@
 <section class="card">
 <h2>Discount calculator</h2>
 <div class="inputs">
-<div><label>Discount (%)</label><input id="p3" placeholder="e.g. 30"></div>
-<div><label>Original price</label><input id="a3" placeholder="e.g. 2000"></div>
+<div><label>Discount (%)</label><input id="p3" inputmode="decimal" placeholder="e.g. 30"></div>
+<div><label>Original price</label><input id="a3" inputmode="decimal" placeholder="e.g. 2000"></div>
 </div>
 <div class="result" id="r3" data-example="30% off 2000 gives 1400" data-template="<div class='nl'>{V1}% off {V2} gives <b>{R}</b></div>"></div>
 </section>
@@ -166,8 +166,8 @@
 <section class="card">
 <h2>Price hike / promotion calculator</h2>
 <div class="inputs">
-<div><label>Increase (%)</label><input id="p4" placeholder="e.g. 15"></div>
-<div><label>Original price</label><input id="a4" placeholder="e.g. 1000"></div>
+<div><label>Increase (%)</label><input id="p4" inputmode="decimal" placeholder="e.g. 15"></div>
+<div><label>Original price</label><input id="a4" inputmode="decimal" placeholder="e.g. 1000"></div>
 </div>
 <div class="result" id="r4" data-example="15% increase on 1000 gives 1150" data-template="<div class='nl'>{V1}% increase on {V2} gives <b>{R}</b></div>"></div>
 </section>
@@ -176,8 +176,8 @@
 <section class="card">
 <h2>Percentage increase or decrease</h2>
 <div class="inputs">
-<div><label>Original value</label><input id="o5" placeholder="e.g. 500"></div>
-<div><label>New value</label><input id="n5" placeholder="e.g. 650"></div>
+<div><label>Original value</label><input id="o5" inputmode="decimal" placeholder="e.g. 500"></div>
+<div><label>New value</label><input id="n5" inputmode="decimal" placeholder="e.g. 650"></div>
 </div>
 <div class="result" id="r5" data-example="500 → 650 is 30% increase" data-template="<div class='nl'>{V1} → {V2} is <b>{R}%</b></div>"></div>
 </section>
@@ -258,6 +258,22 @@
 <div class="faq-item"><button class="faq-q">How do I calculate discount?</button><div class="faq-a">Enter discount percentage and original price.</div></div>
 <div class="faq-item"><button class="faq-q">How do I calculate profit or loss?</button><div class="faq-a">Use percentage increase or decrease based on cost and selling price.</div></div>
 
+</section>
+
+<!-- Related Calculators -->
+<section class="content">
+<h2>Specialized Calculators</h2>
+<p>Try our dedicated calculators for specific use cases:</p>
+<ul>
+<li><a href="/gst-calculator">GST Calculator</a> – Calculate GST amount at 5%, 12%, 18%, 28% rates</li>
+<li><a href="/discount-calculator">Discount Calculator</a> – Find sale price and savings after discount</li>
+<li><a href="/percentage-increase-calculator">Percentage Increase Calculator</a> – Calculate value after percentage increase</li>
+<li><a href="/percentage-decrease-calculator">Percentage Decrease Calculator</a> – Calculate value after percentage decrease</li>
+<li><a href="/salary-hike-calculator">Salary Hike Calculator</a> – Calculate new salary after increment</li>
+<li><a href="/emi-impact-calculator">EMI Calculator</a> – Calculate monthly EMI for loans</li>
+<li><a href="/sip-growth-calculator">SIP Growth Calculator</a> – Calculate mutual fund SIP returns</li>
+<li><a href="/cashback-value-calculator">Cashback Calculator</a> – Calculate cashback rewards and savings</li>
+</ul>
 </section>
 </main>
 
