@@ -43,7 +43,19 @@
     { inputs: ['hikePct', 'hikeSalary'], result: 'hikeResult', calc: (pct, salary) => salary * (1 + pct / 100) },
 
     // Cashback Calculator
-    { inputs: ['cbPct', 'cbAmount'], result: 'cbResult', calc: (pct, amount) => pct / 100 * amount }
+    { inputs: ['cbPct', 'cbAmount'], result: 'cbResult', calc: (pct, amount) => pct / 100 * amount },
+
+    // Profit Margin Calculator: margin % = ((SP - CP) / SP) × 100
+    { inputs: ['marginSP', 'marginCP'], result: 'marginResult', calc: (sp, cp) => ((sp - cp) / sp) * 100 },
+
+    // Markup Calculator: markup % = ((SP - CP) / CP) × 100
+    { inputs: ['markupSP', 'markupCP'], result: 'markupResult', calc: (sp, cp) => ((sp - cp) / cp) * 100 },
+
+    // Marks Percentage Calculator: (obtained / total) × 100
+    { inputs: ['marksObt', 'marksTotal'], result: 'marksResult', calc: (obt, total) => (obt / total) * 100 },
+
+    // CGPA to Percentage: CGPA × multiplier (default 9.5)
+    { inputs: ['cgpaVal', 'cgpaMult'], result: 'cgpaResult', calc: (cgpa, mult) => cgpa * mult }
   ];
 
   // Initialize calculators
@@ -65,8 +77,8 @@
       if (isInline) {
         // Inline calculator mode
         if (!v1 && !v2) {
-          // Show greyed-out example
-          result.textContent = example;
+          // Show greyed-out example hint
+          result.textContent = example ? 'e.g. ' + example : '';
           result.classList.add('example-result');
           return;
         }
@@ -283,6 +295,52 @@
     observer.observe(resultDiv, { childList: true, subtree: true });
   });
 
+  // --- Auto-focus first input ---
+  const firstInline = document.querySelector('.inline-calcs input');
+  const firstCard = document.querySelector('.card .inputs input');
+  const focusTarget = firstInline || firstCard;
+  if (focusTarget && !new URLSearchParams(window.location.search).get('q')) {
+    focusTarget.focus();
+  }
+
+  // --- Lazy-load AdSense ---
+  // Load AdSense script only after user scrolls/interacts (improves initial page speed)
+  const adsLoaded = { done: false };
+  function loadAds() {
+    if (adsLoaded.done) return;
+    adsLoaded.done = true;
+    // Inject AdSense script dynamically
+    const adScript = document.createElement('script');
+    adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874718379352488';
+    adScript.async = true;
+    adScript.crossOrigin = 'anonymous';
+    adScript.onload = () => {
+      document.querySelectorAll('.adsbygoogle').forEach(() => {
+        try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+      });
+    };
+    document.head.appendChild(adScript);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 4000);
+
+  // --- Number formatting with commas in inputs ---
+  document.querySelectorAll('input[inputmode="decimal"]').forEach(input => {
+    input.addEventListener('focus', () => {
+      // Strip commas on focus so user can edit raw number
+      input.value = input.value.replace(/,/g, '');
+    });
+    input.addEventListener('blur', () => {
+      const raw = input.value.replace(/,/g, '');
+      if (raw && !isNaN(raw)) {
+        const parts = raw.split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        input.value = parts.join('.');
+      }
+    });
+  });
+
   // --- Query Parameter Auto-Fill ---
   // Handles ?q=25+percent+of+400 or ?q=25%25+of+400
   // Pre-fills calculator inputs on homepage/calculator pages
@@ -300,6 +358,62 @@
         pInput.dispatchEvent(new Event('input'));
       }
     }
+  }
+
+  // --- Recent Calculations History (localStorage) ---
+  const HISTORY_KEY = 'percentof_history';
+  const MAX_HISTORY = 10;
+
+  function getHistory() {
+    try { return JSON.parse(localStorage.getItem(HISTORY_KEY)) || []; } catch(e) { return []; }
+  }
+
+  function saveToHistory(text) {
+    if (!text || text === '?') return;
+    const history = getHistory();
+    // Avoid duplicates at top
+    if (history[0] === text) return;
+    // Remove if exists elsewhere
+    const idx = history.indexOf(text);
+    if (idx > 0) history.splice(idx, 1);
+    history.unshift(text);
+    if (history.length > MAX_HISTORY) history.pop();
+    try { localStorage.setItem(HISTORY_KEY, JSON.stringify(history)); } catch(e) {}
+    renderHistory();
+  }
+
+  function renderHistory() {
+    const container = document.querySelector('.recent-history');
+    if (!container) return;
+    const history = getHistory();
+    if (history.length === 0) {
+      container.style.display = 'none';
+      return;
+    }
+    container.style.display = '';
+    const list = container.querySelector('.history-list');
+    if (!list) return;
+    list.innerHTML = history.map(h => `<span class="history-item">${h}</span>`).join('');
+  }
+
+  // Hook into inline calculators to save results
+  document.querySelectorAll('.inline-result').forEach(result => {
+    const obs = new MutationObserver(() => {
+      if (!result.classList.contains('example-result') && result.textContent && result.textContent !== '?') {
+        saveToHistory(result.textContent.trim());
+      }
+    });
+    obs.observe(result, { childList: true, characterData: true, subtree: true });
+  });
+
+  // Inject history section on homepage/calculator pages
+  const inlineSection = document.querySelector('.inline-calcs');
+  if (inlineSection) {
+    const historyDiv = document.createElement('div');
+    historyDiv.className = 'recent-history';
+    historyDiv.innerHTML = '<div class="history-label">Recent:</div><div class="history-list"></div>';
+    inlineSection.after(historyDiv);
+    renderHistory();
   }
 
 })();

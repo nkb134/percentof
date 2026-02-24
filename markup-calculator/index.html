@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- AdSense preconnect removed — ads loaded lazily -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20Y5F7DX7X');
+  </script>
+
+  <!-- Title & Description -->
+  <title>Markup Calculator — Calculate Markup % Instantly | Percentof</title>
+  <meta name="description" content="Free markup calculator to find markup percentage from cost price and selling price. Learn markup vs margin, markup formula, and common markup percentages by industry.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://percentof.in/markup-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Markup Calculator — Calculate Markup % Instantly">
+  <meta property="og:description" content="Free markup calculator to find markup percentage from cost price and selling price. Learn markup vs margin and common markup percentages.">
+  <meta property="og:image" content="https://percentof.in/og-image.jpg">
+  <meta property="og:url" content="https://percentof.in/markup-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Markup Calculator — Calculate Markup % Instantly">
+  <meta name="twitter:description" content="Free markup calculator to find markup percentage from cost price and selling price. Learn markup vs margin and common markup percentages.">
+  <meta name="twitter:image" content="https://percentof.in/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.min.js" defer></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate markup percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Markup % = (Selling Price - Cost Price) / Cost Price x 100. For example, if cost is Rs. 500 and selling price is Rs. 800, markup = (800-500) / 500 x 100 = 60%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between markup and margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Markup is calculated on the cost price, while margin is calculated on the selling price. A product bought at Rs. 500 and sold at Rs. 800 has a 60% markup but only a 37.5% margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good markup percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A good markup depends on the industry. Retail clothing typically uses 50-100% markup, restaurants 200-300% on food, electronics 5-20%, and jewelry 100-300%. The right markup covers costs and delivers target profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert markup to margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin % = Markup % / (100 + Markup %) x 100. For example, a 50% markup equals 50 / 150 x 100 = 33.3% margin. Margin is always lower than markup for the same transaction."
+      }
+    }
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://percentof.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Percentage Calculator",
+      "item": "https://percentof.in/percentage-calculator/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Markup Calculator",
+      "item": "https://percentof.in/markup-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Google AdSense -->
+  <!-- AdSense loaded lazily via main.js -->
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><a href="/" style="text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center"><span>%</span>Percentof</a></div>
+<div class="tabs">
+<a href="/percentage-calculator/">Calculator</a>
+</div>
+</div>
+</header>
+
+<div class="layout">
+<main>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="/">Home</a> &rsaquo; <a href="/percentage-calculator/">Percentage Calculator</a> &rsaquo; <span>Markup Calculator</span>
+</nav>
+
+<h1>Markup Calculator</h1>
+
+<!-- Markup Calculator -->
+<section class="card">
+<h2>Calculate Markup Percentage</h2>
+<div class="inputs">
+<div><label>Selling Price (₹)</label><input id="markupSP" inputmode="decimal" placeholder="e.g. 800"></div>
+<div><label>Cost Price (₹)</label><input id="markupCP" inputmode="decimal" placeholder="e.g. 500"></div>
+</div>
+<div class="result" id="markupResult" data-example="Markup on ₹500 sold at ₹800 = 60%" data-template="<div class='nl'>Markup: <b>{R}%</b></div>"></div>
+</section>
+
+<div class="ad-slot ad-after-calculator">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<!-- Educational Content -->
+<section class="content">
+<h2>Understanding Markup: A Complete Business Guide</h2>
+
+<p>Markup is one of the most fundamental concepts in business and pricing strategy. It represents the percentage added to the cost price of a product or service to arrive at its selling price. Whether you run a retail shop, an e-commerce store, or a restaurant, understanding markup is essential for setting prices that cover your costs and generate profit. This calculator helps you instantly find the markup percentage between any cost price and selling price.</p>
+
+<h3>What Is Markup?</h3>
+<p>Markup is the difference between the selling price and the cost price, expressed as a percentage of the cost price. It tells you how much more you are charging compared to what the product cost you. For example, if you buy a product for ₹500 and sell it for ₹750, you have added ₹250 on top of your cost -- that is a 50% markup.</p>
+<p>Markup is always calculated relative to the cost price, which is what distinguishes it from profit margin. Businesses use markup to ensure they earn enough on each sale to cover overhead expenses like rent, salaries, marketing, and still turn a profit.</p>
+
+<h3>Markup vs Margin: The Key Difference</h3>
+<p>Many people confuse markup with margin, but they are different metrics that use different bases for calculation:</p>
+<ul>
+<li><strong>Markup</strong> is based on the <strong>cost price</strong>: Markup % = (Selling Price - Cost Price) / Cost Price x 100</li>
+<li><strong>Margin</strong> is based on the <strong>selling price</strong>: Margin % = (Selling Price - Cost Price) / Selling Price x 100</li>
+</ul>
+<p><strong>Example with the same numbers:</strong> A product bought at ₹500 and sold at ₹800:</p>
+<ul>
+<li>Markup = (800 - 500) / 500 x 100 = <strong>60%</strong></li>
+<li>Margin = (800 - 500) / 800 x 100 = <strong>37.5%</strong></li>
+</ul>
+<p>The markup is always higher than the margin for the same transaction. This is a common source of pricing errors -- if you intend a 50% margin but apply a 50% markup instead, you will earn less than expected. Always clarify which metric you are using when discussing pricing.</p>
+
+<h3>Markup Formula with Step-by-Step Example</h3>
+<p>The formula to calculate markup percentage is:</p>
+<ul>
+<li><strong>Markup % = ((Selling Price - Cost Price) / Cost Price) x 100</strong></li>
+</ul>
+<p><strong>Step-by-step example:</strong> You purchase a phone case for ₹200 and sell it for ₹350.</p>
+<ul>
+<li>Step 1: Find the profit = Selling Price - Cost Price = 350 - 200 = ₹150</li>
+<li>Step 2: Divide profit by cost price = 150 / 200 = 0.75</li>
+<li>Step 3: Multiply by 100 = 0.75 x 100 = <strong>75% markup</strong></li>
+</ul>
+<p>This means you charged 75% more than your cost. For every ₹1 you spent, you earned ₹1.75 in revenue.</p>
+
+<h3>Quick Reference: Common Markup Percentages</h3>
+<table class="quick-table">
+<thead><tr><th>Cost Price</th><th>Selling Price</th><th>Markup %</th></tr></thead>
+<tbody>
+<tr><td>₹100</td><td>₹150</td><td>50%</td></tr>
+<tr><td>₹200</td><td>₹350</td><td>75%</td></tr>
+<tr><td>₹500</td><td>₹800</td><td>60%</td></tr>
+<tr><td>₹1,000</td><td>₹1,500</td><td>50%</td></tr>
+<tr><td>₹1,000</td><td>₹2,000</td><td>100%</td></tr>
+<tr><td>₹2,000</td><td>₹3,500</td><td>75%</td></tr>
+<tr><td>₹5,000</td><td>₹6,500</td><td>30%</td></tr>
+<tr><td>₹5,000</td><td>₹10,000</td><td>100%</td></tr>
+<tr><td>₹10,000</td><td>₹15,000</td><td>50%</td></tr>
+</tbody>
+</table>
+
+<div class="ad-slot ad-in-content">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_IN_CONTENT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<h3>Common Markup Percentages by Industry</h3>
+<p>Different industries follow different markup conventions based on competition, demand, and cost structures:</p>
+<ul>
+<li><strong>Grocery and Supermarkets:</strong> 5-25% markup. Thin margins due to high volume and price competition.</li>
+<li><strong>Retail Clothing and Apparel:</strong> 50-100% markup. Seasonal demand and branding allow higher markups.</li>
+<li><strong>Electronics and Gadgets:</strong> 5-20% markup. Intense online competition keeps markups low.</li>
+<li><strong>Restaurants and Food Service:</strong> 200-300% markup on food, 300-500% on beverages. High overhead costs justify this.</li>
+<li><strong>Jewelry:</strong> 100-300% markup. Perceived value and craftsmanship support premium pricing.</li>
+<li><strong>Furniture:</strong> 40-80% markup. Storage and delivery costs factor into pricing.</li>
+<li><strong>Pharmaceuticals:</strong> 10-1000% markup. Varies widely between generic and branded medicines.</li>
+<li><strong>Auto Parts:</strong> 30-50% markup. Specialized nature and compatibility requirements allow moderate markups.</li>
+</ul>
+
+<h3>How to Set the Right Markup for Your Business</h3>
+<p>Choosing the correct markup involves balancing several factors:</p>
+<ul>
+<li><strong>Cover all costs:</strong> Your markup must account for cost of goods, overhead (rent, utilities, salaries), and desired profit.</li>
+<li><strong>Research competitors:</strong> Price too high and customers go elsewhere; price too low and you lose money.</li>
+<li><strong>Consider perceived value:</strong> Premium branding can justify higher markups even on similar products.</li>
+<li><strong>Account for discounts:</strong> If you plan to offer 20% discounts during sales, build that into your base markup.</li>
+<li><strong>Factor in returns:</strong> Some products have high return rates, which eat into profit.</li>
+</ul>
+
+<h3>Markup to Margin Conversion</h3>
+<p>Use these formulas to convert between markup and margin:</p>
+<ul>
+<li>Margin % = Markup % / (100 + Markup %) x 100</li>
+<li>Markup % = Margin % / (100 - Margin %) x 100</li>
+</ul>
+<p><strong>Quick conversions:</strong></p>
+<ul>
+<li>25% markup = 20% margin</li>
+<li>50% markup = 33.3% margin</li>
+<li>100% markup = 50% margin</li>
+<li>200% markup = 66.7% margin</li>
+</ul>
+
+<p>Use our calculator above to instantly determine the markup percentage for any cost and selling price combination. For related calculations, explore our <a href="/percentage-calculator/">percentage calculator</a> or <a href="/percentage-increase-calculator/">percentage increase calculator</a>.</p>
+</section>
+
+<!-- FAQs -->
+<section class="card">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><button class="faq-q">How do I calculate markup percentage?</button><div class="faq-a">Markup % = (Selling Price - Cost Price) / Cost Price x 100. For example, if cost is ₹500 and selling price is ₹800: (800-500) / 500 x 100 = 60% markup.</div></div>
+<div class="faq-item"><button class="faq-q">What is the difference between markup and margin?</button><div class="faq-a">Markup is based on cost price, margin is based on selling price. A product at ₹500 cost sold for ₹800 has 60% markup but only 37.5% margin. Markup is always the higher number.</div></div>
+<div class="faq-item"><button class="faq-q">What is 100% markup?</button><div class="faq-a">A 100% markup means the selling price is double the cost price. If you buy at ₹1,000 and sell at ₹2,000, that is a 100% markup (and a 50% margin).</div></div>
+<div class="faq-item"><button class="faq-q">How do I find selling price from markup?</button><div class="faq-a">Selling Price = Cost Price x (1 + Markup % / 100). For a 60% markup on ₹500 cost: 500 x 1.60 = ₹800 selling price.</div></div>
+
+</section>
+
+<!-- Related Calculators -->
+<section class="content">
+<h2>Related Calculators</h2>
+<p>Explore more percentage and financial calculators:</p>
+<ul>
+<li><a href="/percentage-calculator/">Percentage Calculator</a> – All-in-one percentage calculations</li>
+<li><a href="/percentage-increase-calculator/">Percentage Increase Calculator</a> – Calculate any percentage increase</li>
+<li><a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a> – Calculate percentage reduction</li>
+<li><a href="/discount-calculator/">Discount Calculator</a> – Sale price after discount</li>
+<li><a href="/gst-calculator/">GST Calculator</a> – Calculate GST on purchases</li>
+<li><a href="/salary-hike-calculator/">Salary Hike Calculator</a> – New salary after increment</li>
+</ul>
+</section>
+
+</main>
+<aside class="sidebar-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_SIDEBAR" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</aside>
+</div>
+
+<footer>
+<div class="footer">
+<div class="footer-links">
+<a href="/about/">About</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/contact/">Contact</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+<div class="footer-copy">&copy; 2026 Percentof. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>

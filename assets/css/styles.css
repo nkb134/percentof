@@ -360,13 +360,14 @@ footer {
   gap: 6px;
   font-size: 17px;
   font-weight: 500;
-  padding: 10px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border);
   line-height: 1.6;
 }
 
 .inline-row:last-child {
   border-bottom: none;
+  padding-bottom: 4px;
 }
 
 .inline-row .inline-label {
@@ -400,8 +401,10 @@ footer {
 }
 
 .inline-row .inline-result.example-result {
-  color: var(--muted);
-  font-weight: 500;
+  color: #b0bec5;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: italic;
 }
 
 /* Result Action Buttons */
@@ -578,6 +581,34 @@ footer {
 
 .tip a:hover {
   text-decoration: underline;
+}
+
+/* Recent History */
+.recent-history {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.history-label {
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.history-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.history-item {
+  background: var(--soft);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 /* Breadcrumb */

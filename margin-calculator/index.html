@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <!-- AdSense preconnect removed — ads loaded lazily -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-20Y5F7DX7X');
+  </script>
+
+  <!-- Title & Description -->
+  <title>Profit Margin Calculator — Calculate Margin % Instantly | Percentof</title>
+  <meta name="description" content="Free profit margin calculator. Enter selling price and cost price to instantly calculate margin percentage. Understand margin vs markup with step-by-step examples.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://percentof.in/margin-calculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Profit Margin Calculator — Calculate Margin % Instantly | Percentof">
+  <meta property="og:description" content="Free profit margin calculator. Enter selling price and cost price to instantly calculate margin percentage.">
+  <meta property="og:image" content="https://percentof.in/og-image.jpg">
+  <meta property="og:url" content="https://percentof.in/margin-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Profit Margin Calculator — Calculate Margin % Instantly | Percentof">
+  <meta name="twitter:description" content="Free profit margin calculator. Enter selling price and cost price to instantly calculate margin percentage.">
+  <meta name="twitter:image" content="https://percentof.in/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.min.js" defer></script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is profit margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Profit margin is the percentage of revenue that remains as profit after deducting costs. It is calculated as (Selling Price - Cost Price) ÷ Selling Price × 100. For example, if you sell a product for ₹800 that costs ₹500, your profit margin is 37.5%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between margin and markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin is calculated as a percentage of the selling price, while markup is calculated as a percentage of the cost price. For example, if cost is ₹500 and selling price is ₹800, margin is 37.5% (300÷800×100) but markup is 60% (300÷500×100). Margin is always lower than markup for the same transaction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate profit margin percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the formula: Margin % = (Selling Price - Cost Price) ÷ Selling Price × 100. Enter your selling price and cost price into the calculator above to get your margin instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good profit margin for a business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A good profit margin varies by industry. Retail businesses typically have 2-5% net margins, software companies 20-40%, and luxury goods 10-20%. Gross margins are higher: grocery stores average 25-30%, while clothing retailers average 50-60%."
+      }
+    }
+  ]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://percentof.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Percentage Calculator",
+      "item": "https://percentof.in/percentage-calculator/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Margin Calculator",
+      "item": "https://percentof.in/margin-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Google AdSense -->
+  <!-- AdSense loaded lazily via main.js -->
+</head>
+
+<body>
+<header>
+<div class="header">
+<div class="logo"><a href="/" style="text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center"><span>%</span>Percentof</a></div>
+<div class="tabs">
+<a href="/percentage-calculator/">Calculator</a>
+</div>
+</div>
+</header>
+
+<div class="layout">
+<main>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="/">Home</a> &rsaquo; <a href="/percentage-calculator/">Percentage Calculator</a> &rsaquo; <span>Margin Calculator</span>
+</nav>
+
+<h1>Profit Margin Calculator</h1>
+
+<!-- Margin Calculator -->
+<section class="card">
+<h2>Calculate Profit Margin</h2>
+<div class="inputs">
+<div><label>Selling Price (₹)</label><input id="marginSP" inputmode="decimal" placeholder="e.g. 800"></div>
+<div><label>Cost Price (₹)</label><input id="marginCP" inputmode="decimal" placeholder="e.g. 500"></div>
+</div>
+<div class="result" id="marginResult" data-example="Margin on ₹500 sold at ₹800 = 37.5%" data-template="<div class='nl'>Profit margin: <b>{R}%</b></div>"></div>
+</section>
+
+<div class="ad-slot ad-after-calculator">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<!-- Educational Content -->
+<section class="content">
+<h2>Understanding Profit Margin: A Complete Business Guide</h2>
+
+<p>Profit margin is one of the most important financial metrics for any business. It tells you what percentage of your revenue is actual profit after covering the cost of goods sold. Whether you run a small shop, an e-commerce store, or a large enterprise, understanding profit margin helps you price products correctly, evaluate business health, and make informed financial decisions.</p>
+
+<h3>What Is Profit Margin?</h3>
+<p>Profit margin (also called gross profit margin) measures how much of every rupee in sales a company keeps as profit. It is expressed as a percentage and calculated by dividing the difference between selling price and cost price by the selling price. A higher margin means you retain more money from each sale, while a lower margin means most of your revenue goes toward covering costs.</p>
+<p>For example, if you sell a product for ₹1,000 and it costs you ₹600 to produce or purchase, your profit is ₹400. Your profit margin is 400 ÷ 1,000 × 100 = <strong>40%</strong>. This means 40 paise of every rupee earned is profit.</p>
+
+<h3>Margin vs Markup: The Key Difference</h3>
+<p>One of the most common points of confusion in business pricing is the difference between margin and markup. While both measure profitability, they use different bases for calculation:</p>
+<ul>
+<li><strong>Margin</strong> is calculated as a percentage of the <strong>selling price</strong>: Margin % = (Selling Price - Cost Price) ÷ Selling Price × 100</li>
+<li><strong>Markup</strong> is calculated as a percentage of the <strong>cost price</strong>: Markup % = (Selling Price - Cost Price) ÷ Cost Price × 100</li>
+</ul>
+<p><strong>Example:</strong> A product costs ₹500 and sells for ₹800.</p>
+<ul>
+<li>Profit = ₹800 - ₹500 = ₹300</li>
+<li>Margin = 300 ÷ 800 × 100 = <strong>37.5%</strong> (based on selling price)</li>
+<li>Markup = 300 ÷ 500 × 100 = <strong>60%</strong> (based on cost price)</li>
+</ul>
+<p>Notice that margin is always lower than markup for the same transaction. Confusing the two can lead to pricing errors. If you intend a 40% margin but accidentally apply a 40% markup, you will earn less profit than expected.</p>
+
+<div class="ad-slot ad-in-content">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_IN_CONTENT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</div>
+
+<h3>Profit Margin Formula with Step-by-Step Example</h3>
+<p>The formula for profit margin percentage is:</p>
+<ul>
+<li><strong>Margin % = ((Selling Price - Cost Price) ÷ Selling Price) × 100</strong></li>
+</ul>
+<p><strong>Step-by-step example:</strong> You buy a phone case for ₹200 and sell it for ₹350.</p>
+<ul>
+<li>Step 1: Calculate profit = ₹350 - ₹200 = ₹150</li>
+<li>Step 2: Divide profit by selling price = 150 ÷ 350 = 0.4286</li>
+<li>Step 3: Multiply by 100 = 0.4286 × 100 = <strong>42.86%</strong></li>
+</ul>
+<p>Your profit margin is 42.86%, meaning you keep about ₹43 of every ₹100 in revenue as gross profit.</p>
+
+<h3>Quick Reference: Common Margin Calculations</h3>
+<table class="quick-table">
+<thead><tr><th>Cost Price (₹)</th><th>Selling Price (₹)</th><th>Profit (₹)</th><th>Margin %</th><th>Markup %</th></tr></thead>
+<tbody>
+<tr><td>₹100</td><td>₹150</td><td>₹50</td><td>33.3%</td><td>50%</td></tr>
+<tr><td>₹200</td><td>₹350</td><td>₹150</td><td>42.9%</td><td>75%</td></tr>
+<tr><td>₹500</td><td>₹800</td><td>₹300</td><td>37.5%</td><td>60%</td></tr>
+<tr><td>₹750</td><td>₹1,000</td><td>₹250</td><td>25.0%</td><td>33.3%</td></tr>
+<tr><td>₹1,000</td><td>₹1,500</td><td>₹500</td><td>33.3%</td><td>50%</td></tr>
+<tr><td>₹2,000</td><td>₹3,500</td><td>₹1,500</td><td>42.9%</td><td>75%</td></tr>
+<tr><td>₹5,000</td><td>₹8,000</td><td>₹3,000</td><td>37.5%</td><td>60%</td></tr>
+</tbody>
+</table>
+
+<h3>Why Profit Margin Matters for Business</h3>
+<p>Profit margin is critical for several business decisions:</p>
+<ul>
+<li><strong>Pricing Strategy:</strong> Knowing your target margin helps you set selling prices that cover costs and generate desired profit. If your costs increase, margin analysis shows exactly how much to raise prices.</li>
+<li><strong>Business Health:</strong> Tracking margin over time reveals whether your business is becoming more or less efficient. Declining margins may signal rising costs, competitive pressure, or pricing issues.</li>
+<li><strong>Comparing Products:</strong> Margin analysis helps identify which products or services are most profitable. You might find that a lower-priced item with 50% margin contributes more profit than a high-priced item with 10% margin.</li>
+<li><strong>Investor Confidence:</strong> Investors and lenders look at margins to assess business viability. Healthy margins indicate strong pricing power and cost control.</li>
+<li><strong>Break-even Analysis:</strong> Understanding your average margin helps calculate how much revenue you need to cover fixed expenses like rent, salaries, and utilities.</li>
+</ul>
+
+<p>Use the calculator above to quickly determine profit margins for any product or service. For related calculations, visit our <a href="/percentage-calculator/">percentage calculator</a> or explore the <a href="/markup-calculator/">markup calculator</a> to convert between margin and markup.</p>
+</section>
+
+<!-- FAQs -->
+<section class="card">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><button class="faq-q">What is profit margin?</button><div class="faq-a">Profit margin is the percentage of revenue remaining after deducting the cost of goods sold. It is calculated as (Selling Price - Cost Price) ÷ Selling Price × 100. A 40% margin means you keep ₹40 of every ₹100 in sales as gross profit.</div></div>
+<div class="faq-item"><button class="faq-q">What is the difference between margin and markup?</button><div class="faq-a">Margin is based on selling price, markup is based on cost price. If cost is ₹500 and selling price is ₹800, margin is 37.5% but markup is 60%. Margin is always lower than markup for the same transaction.</div></div>
+<div class="faq-item"><button class="faq-q">How do I convert markup to margin?</button><div class="faq-a">Margin % = Markup % ÷ (100 + Markup %) × 100. For example, a 50% markup = 50 ÷ 150 × 100 = 33.3% margin.</div></div>
+<div class="faq-item"><button class="faq-q">What is a good profit margin?</button><div class="faq-a">It varies by industry. Grocery stores average 2-5% net margin, restaurants 3-9%, retail clothing 4-13%, and software companies 20-40%. Gross margins are typically higher than net margins.</div></div>
+<div class="faq-item"><button class="faq-q">Can profit margin be negative?</button><div class="faq-a">Yes. If your selling price is lower than cost price, the margin is negative, meaning you are selling at a loss. For example, selling a ₹500 item for ₹400 gives a margin of -25%.</div></div>
+
+</section>
+
+<!-- Related Calculators -->
+<section class="content">
+<h2>Related Calculators</h2>
+<p>Explore more percentage and financial calculators:</p>
+<ul>
+<li><a href="/markup-calculator/">Markup Calculator</a> – Calculate markup percentage from cost and selling price</li>
+<li><a href="/percentage-calculator/">Percentage Calculator</a> – All-in-one percentage calculations</li>
+<li><a href="/discount-calculator/">Discount Calculator</a> – Calculate sale price after discount</li>
+<li><a href="/gst-calculator/">GST Calculator</a> – Calculate GST amount and total price</li>
+<li><a href="/percentage-increase-calculator/">Percentage Increase Calculator</a> – Calculate percentage increase between values</li>
+<li><a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a> – Calculate percentage decrease between values</li>
+</ul>
+</section>
+
+</main>
+<aside class="sidebar-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_SIDEBAR" data-ad-format="auto" data-full-width-responsive="true"></ins>
+</aside>
+</div>
+
+<footer>
+<div class="footer">
+<div class="footer-links">
+<a href="/about/">About</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/contact/">Contact</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+<div class="footer-copy">&copy; 2026 Percentof. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <!-- AdSense preconnect removed — ads loaded lazily -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
@@ -81,9 +81,49 @@
 }
 </script>
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874718379352488"
-     crossorigin="anonymous"></script>
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate percentage of a number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the number by the percentage and divide by 100. For example, 25% of 400 = (25 × 400) ÷ 100 = 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage is one number of another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the first number by the second and multiply by 100. For example, 400 out of 500 = (400 ÷ 500) × 100 = 80%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate percentage change between two numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the old value from the new value, divide by the old value, and multiply by 100. For example, change from 200 to 250 = ((250-200) ÷ 200) × 100 = 25%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate discount percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the original price by the discount percentage and divide by 100, then subtract from the original price. For example, 20% off ₹800 = 800 - (800 × 20 ÷ 100) = ₹640."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- AdSense loaded lazily via main.js -->
 </head>
 
 <body>
@@ -115,7 +155,7 @@
 <span class="inline-label">% of</span>
 <input id="a1" inputmode="decimal" placeholder="400">
 <span class="inline-label">=</span>
-<span class="inline-result example-result" id="r1" data-example="100" data-template="{R}">100</span>
+<span class="inline-result example-result" id="r1" data-example="100" data-template="{R}">e.g. 100</span>
 </div>
 
 <!-- Calculator 2: X is what % of Y -->
@@ -124,7 +164,7 @@
 <span class="inline-label">is what % of</span>
 <input id="y2" inputmode="decimal" placeholder="500">
 <span class="inline-label">=</span>
-<span class="inline-result example-result" id="r2" data-example="80%" data-template="{R}%">80%</span>
+<span class="inline-result example-result" id="r2" data-example="80%" data-template="{R}%">e.g. 80%</span>
 </div>
 
 <!-- Calculator 3: % change from X to Y -->
@@ -134,13 +174,12 @@
 <span class="inline-label">to</span>
 <input id="n5" inputmode="decimal" placeholder="250">
 <span class="inline-label">=</span>
-<span class="inline-result example-result" id="r5" data-example="25%" data-template="{R}%">25%</span>
+<span class="inline-result example-result" id="r5" data-example="25%" data-template="{R}%">e.g. 25%</span>
 </div>
 </section>
 
 <div class="ad-slot ad-after-calculator">
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
 <!-- Calculator Hub -->
@@ -210,6 +249,34 @@
 <div class="card-desc">Calculate cashback rewards</div>
 </div>
 </a>
+<a class="calc-card" href="/marks-percentage-calculator/">
+<span class="card-icon">📝</span>
+<div class="card-info">
+<div class="card-name">Marks Percentage</div>
+<div class="card-desc">Exam score to percentage</div>
+</div>
+</a>
+<a class="calc-card" href="/cgpa-to-percentage-calculator/">
+<span class="card-icon">🎓</span>
+<div class="card-info">
+<div class="card-name">CGPA to %</div>
+<div class="card-desc">Convert CGPA to percentage</div>
+</div>
+</a>
+<a class="calc-card" href="/margin-calculator/">
+<span class="card-icon">💹</span>
+<div class="card-info">
+<div class="card-name">Profit Margin</div>
+<div class="card-desc">Calculate profit margin %</div>
+</div>
+</a>
+<a class="calc-card" href="/markup-calculator/">
+<span class="card-icon">🏷</span>
+<div class="card-info">
+<div class="card-name">Markup</div>
+<div class="card-desc">Calculate markup percentage</div>
+</div>
+</a>
 </div>
 </section>
 
@@ -230,20 +297,39 @@
 <a href="/what-is-12-percent-of-1000/">12% of 1,000</a>
 <a href="/what-is-20-percent-of-10000/">20% of 10,000</a>
 </div>
+
+<h3>What Percent Is...</h3>
+<div class="popular-grid">
+<a href="/400-is-what-percent-of-500/">400 of 500</a>
+<a href="/450-is-what-percent-of-600/">450 of 600</a>
+<a href="/300-is-what-percent-of-500/">300 of 500</a>
+<a href="/80-is-what-percent-of-100/">80 of 100</a>
+<a href="/200-is-what-percent-of-500/">200 of 500</a>
+<a href="/750-is-what-percent-of-1000/">750 of 1,000</a>
+</div>
+
+<h3>Percentage Change</h3>
+<div class="popular-grid">
+<a href="/percentage-change-from-50000-to-60000/">50K to 60K</a>
+<a href="/percentage-change-from-30000-to-40000/">30K to 40K</a>
+<a href="/percentage-change-from-40-to-50/">40 to 50</a>
+<a href="/percentage-change-from-1000-to-1500/">1,000 to 1,500</a>
+<a href="/percentage-change-from-200-to-250/">200 to 250</a>
+<a href="/percentage-change-from-50-to-75/">50 to 75</a>
+</div>
 </section>
 
 <!-- Brief Intro -->
 <section class="content">
 <h2>How to Calculate Percentage</h2>
-<p>A percentage is a number expressed as a fraction of 100. To calculate a percentage of any number, multiply the number by the percentage and divide by 100. For example, 25% of 400 = (25 × 400) ÷ 100 = 100.</p>
+<p>A percentage is a number expressed as a fraction of 100. To calculate a percentage of any number, multiply the number by the percentage and divide by 100. For example, <a href="/what-is-25-percent-of-400/">25% of 400</a> = (25 × 400) ÷ 100 = 100.</p>
 <p>To find what percentage one number is of another, divide the first number by the second and multiply by 100. For example, 400 out of 500 = (400 ÷ 500) × 100 = 80%.</p>
-<p>Our free online calculators handle all types of percentage calculations — from simple "what is X% of Y" to specialized computations like GST, discounts, salary hikes, loan EMI, and SIP returns. All results are instant with no sign-up required.</p>
+<p>Our free online calculators handle all types of percentage calculations — from simple "what is X% of Y" to specialized computations like <a href="/gst-calculator/">GST</a>, <a href="/discount-calculator/">discounts</a>, <a href="/salary-hike-calculator/">salary hikes</a>, <a href="/emi-impact-calculator/">loan EMI</a>, and <a href="/sip-growth-calculator/">SIP returns</a>. Students can use our <a href="/marks-percentage-calculator/">marks percentage calculator</a> or <a href="/cgpa-to-percentage-calculator/">CGPA to percentage converter</a>. All results are instant with no sign-up required.</p>
 </section>
 
 </main>
 <aside class="sidebar-ad">
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_SIDEBAR" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </aside>
 </div>
 
@@ -256,7 +342,7 @@
 <a href="/contact/">Contact</a>
 <a href="/sitemap.xml">Sitemap</a>
 </div>
-<div class="footer-copy">&copy; 2025 Percentof. All rights reserved.</div>
+<div class="footer-copy">&copy; 2026 Percentof. All rights reserved.</div>
 </div>
 </footer>
 
