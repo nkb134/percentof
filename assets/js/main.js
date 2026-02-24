@@ -161,4 +161,101 @@
     btn.onclick = () => btn.parentElement.classList.toggle('open');
   });
 
+  // --- UX Essentials: Copy, Clear, WhatsApp Share ---
+
+  // Inject Clear buttons below each .inputs div
+  document.querySelectorAll('.card .inputs').forEach(inputsDiv => {
+    const card = inputsDiv.closest('.card');
+    if (!card) return;
+    const resultDiv = card.querySelector('.result');
+    if (!resultDiv) return;
+
+    const clearBtn = document.createElement('button');
+    clearBtn.className = 'clear-btn';
+    clearBtn.textContent = 'Clear';
+    clearBtn.type = 'button';
+    clearBtn.onclick = () => {
+      inputsDiv.querySelectorAll('input').forEach(inp => {
+        inp.value = '';
+        inp.dispatchEvent(new Event('input'));
+      });
+    };
+    inputsDiv.after(clearBtn);
+  });
+
+  // Helper: extract plain text result from a result div
+  function getResultText(resultDiv) {
+    const nlEl = resultDiv.querySelector('.nl');
+    if (!nlEl) return '';
+    return nlEl.textContent.trim();
+  }
+
+  // Inject Copy + WhatsApp Share buttons inside result divs
+  // We use a MutationObserver to detect when results are rendered
+  document.querySelectorAll('.result').forEach(resultDiv => {
+    const observer = new MutationObserver(() => {
+      // Remove old action buttons
+      const oldActions = resultDiv.querySelector('.result-actions');
+      if (oldActions) oldActions.remove();
+
+      const nlEl = resultDiv.querySelector('.nl');
+      if (!nlEl) return; // No result yet (example or empty)
+
+      const actions = document.createElement('div');
+      actions.className = 'result-actions';
+
+      // Copy button
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-btn';
+      copyBtn.type = 'button';
+      copyBtn.innerHTML = '📋 Copy';
+      copyBtn.onclick = () => {
+        const text = getResultText(resultDiv);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            copyBtn.innerHTML = '✓ Copied!';
+            copyBtn.classList.add('copied');
+            setTimeout(() => {
+              copyBtn.innerHTML = '📋 Copy';
+              copyBtn.classList.remove('copied');
+            }, 1500);
+          });
+        } else {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          copyBtn.innerHTML = '✓ Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(() => {
+            copyBtn.innerHTML = '📋 Copy';
+            copyBtn.classList.remove('copied');
+          }, 1500);
+        }
+      };
+      actions.appendChild(copyBtn);
+
+      // WhatsApp Share button
+      const shareBtn = document.createElement('button');
+      shareBtn.className = 'share-btn';
+      shareBtn.type = 'button';
+      shareBtn.innerHTML = '💬 WhatsApp';
+      shareBtn.onclick = () => {
+        const text = getResultText(resultDiv);
+        const url = 'https://wa.me/?text=' + encodeURIComponent(text + ' — calculated on percentof.in');
+        window.open(url, '_blank');
+      };
+      actions.appendChild(shareBtn);
+
+      resultDiv.appendChild(actions);
+    });
+
+    observer.observe(resultDiv, { childList: true, subtree: true });
+  });
+
 })();

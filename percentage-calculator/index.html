@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
   <script>
@@ -31,7 +35,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Percentage Calculator – Discount, Hike, GST, Marks">
   <meta property="og:description" content="Calculate percentage of an amount, what percent one number is of another, discount, price hike, GST, salary hike and marks percentage.">
-  <meta property="og:image" content="https://percentof.in/og-image.png">
+  <meta property="og:image" content="https://percentof.in/og-image.jpg">
   <meta property="og:url" content="https://percentof.in/percentage-calculator/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
@@ -40,7 +44,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Percentage Calculator – Discount, Hike, GST, Marks">
   <meta name="twitter:description" content="Calculate percentage of an amount, what percent one number is of another, discount, price hike, GST, salary hike and marks percentage.">
-  <meta name="twitter:image" content="https://percentof.in/og-image.png">
+  <meta name="twitter:image" content="https://percentof.in/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
@@ -53,10 +57,10 @@
   <meta name="theme-color" content="#0ea5e9">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
 
   <!-- Calculator Script -->
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.min.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,6 +118,51 @@
 }
 </script>
 
+  <!-- Organization & WebSite Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Percentof",
+  "url": "https://percentof.in",
+  "logo": "https://percentof.in/android-chrome-512x512.png",
+  "description": "Free online percentage calculator for discount, GST, salary hike, marks and more."
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Percentof",
+  "url": "https://percentof.in",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://percentof.in/percentage-calculator/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://percentof.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Percentage Calculator",
+      "item": "https://percentof.in/percentage-calculator/"
+    }
+  ]
+}
+</script>
+
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874718379352488"
      crossorigin="anonymous"></script>
@@ -147,7 +196,10 @@
 <div class="result" id="r1" data-example="25% of 400 is 100" data-template="<div class='nl'><span class='pill'>{V1}%</span> of <span class='pill'>{V2}</span> is <b>{R}</b></div>"></div>
 </section>
 
-<div class="ad-slot ad-after-calculator"></div>
+<div class="ad-slot ad-after-calculator">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <!-- What % is X of Y -->
 <section class="card">
@@ -159,34 +211,67 @@
 <div class="result" id="r2" data-example="400 out of 500 is 80%" data-template="<div class='nl'><span class='pill'>{V1}</span> out of <span class='pill'>{V2}</span> is <b>{R}%</b></div>"></div>
 </section>
 
-<!-- Discount -->
-<section class="card">
-<h2>Discount calculator</h2>
-<div class="inputs">
-<div><label>Discount (%)</label><input id="p3" inputmode="decimal" placeholder="e.g. 30"></div>
-<div><label>Original price</label><input id="a3" inputmode="decimal" placeholder="e.g. 2000"></div>
+<!-- Calculator Hub -->
+<section class="content">
+<h2>All Calculators</h2>
+<div class="calculator-grid">
+<a class="calc-card" href="/discount-calculator/">
+<span class="card-icon">💰</span>
+<div class="card-info">
+<div class="card-name">Discount Calculator</div>
+<div class="card-desc">Find sale price after discount</div>
 </div>
-<div class="result" id="r3" data-example="30% off 2000 gives 1400" data-template="<div class='nl'>{V1}% off {V2} gives <b>{R}</b></div>"></div>
-</section>
-
-<!-- Promo / Hike -->
-<section class="card">
-<h2>Price hike / promotion calculator</h2>
-<div class="inputs">
-<div><label>Increase (%)</label><input id="p4" inputmode="decimal" placeholder="e.g. 15"></div>
-<div><label>Original price</label><input id="a4" inputmode="decimal" placeholder="e.g. 1000"></div>
+</a>
+<a class="calc-card" href="/gst-calculator/">
+<span class="card-icon">📊</span>
+<div class="card-info">
+<div class="card-name">GST Calculator</div>
+<div class="card-desc">Calculate GST at 5%, 12%, 18%, 28%</div>
 </div>
-<div class="result" id="r4" data-example="15% increase on 1000 gives 1150" data-template="<div class='nl'>{V1}% increase on {V2} gives <b>{R}</b></div>"></div>
-</section>
-
-<!-- Change -->
-<section class="card">
-<h2>Percentage increase or decrease</h2>
-<div class="inputs">
-<div><label>Original value</label><input id="o5" inputmode="decimal" placeholder="e.g. 500"></div>
-<div><label>New value</label><input id="n5" inputmode="decimal" placeholder="e.g. 650"></div>
+</a>
+<a class="calc-card" href="/salary-hike-calculator/">
+<span class="card-icon">💼</span>
+<div class="card-info">
+<div class="card-name">Salary Hike</div>
+<div class="card-desc">New salary after increment</div>
 </div>
-<div class="result" id="r5" data-example="500 → 650 is 30% increase" data-template="<div class='nl'>{V1} → {V2} is <b>{R}%</b></div>"></div>
+</a>
+<a class="calc-card" href="/percentage-increase-calculator/">
+<span class="card-icon">📈</span>
+<div class="card-info">
+<div class="card-name">% Increase</div>
+<div class="card-desc">Value after percentage increase</div>
+</div>
+</a>
+<a class="calc-card" href="/percentage-decrease-calculator/">
+<span class="card-icon">📉</span>
+<div class="card-info">
+<div class="card-name">% Decrease</div>
+<div class="card-desc">Value after percentage decrease</div>
+</div>
+</a>
+<a class="calc-card" href="/emi-impact-calculator/">
+<span class="card-icon">🏦</span>
+<div class="card-info">
+<div class="card-name">EMI Calculator</div>
+<div class="card-desc">Monthly EMI for loans</div>
+</div>
+</a>
+<a class="calc-card" href="/sip-growth-calculator/">
+<span class="card-icon">📱</span>
+<div class="card-info">
+<div class="card-name">SIP Growth</div>
+<div class="card-desc">Mutual fund SIP returns</div>
+</div>
+</a>
+<a class="calc-card" href="/cashback-value-calculator/">
+<span class="card-icon">🎁</span>
+<div class="card-info">
+<div class="card-name">Cashback</div>
+<div class="card-desc">Calculate cashback rewards</div>
+</div>
+</a>
+</div>
 </section>
 
 <!-- Educational Content -->
@@ -213,7 +298,10 @@
 </ol>
 <p>Alternatively, you can calculate the final price directly: 800 × (1 - 20/100) = 800 × 0.80 = Rs. 640</p>
 
-<div class="ad-slot ad-in-content"></div>
+<div class="ad-slot ad-in-content">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_IN_CONTENT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
 <h3>How to Calculate GST</h3>
 <p>GST (Goods and Services Tax) calculation is a common use case in India. If you need to add GST to a base price:</p>
@@ -269,23 +357,11 @@
 
 </section>
 
-<!-- Related Calculators -->
-<section class="content">
-<h2>Specialized Calculators</h2>
-<p>Try our dedicated calculators for specific use cases:</p>
-<ul>
-<li><a href="/gst-calculator">GST Calculator</a> – Calculate GST amount at 5%, 12%, 18%, 28% rates</li>
-<li><a href="/discount-calculator">Discount Calculator</a> – Find sale price and savings after discount</li>
-<li><a href="/percentage-increase-calculator">Percentage Increase Calculator</a> – Calculate value after percentage increase</li>
-<li><a href="/percentage-decrease-calculator">Percentage Decrease Calculator</a> – Calculate value after percentage decrease</li>
-<li><a href="/salary-hike-calculator">Salary Hike Calculator</a> – Calculate new salary after increment</li>
-<li><a href="/emi-impact-calculator">EMI Calculator</a> – Calculate monthly EMI for loans</li>
-<li><a href="/sip-growth-calculator">SIP Growth Calculator</a> – Calculate mutual fund SIP returns</li>
-<li><a href="/cashback-value-calculator">Cashback Calculator</a> – Calculate cashback rewards and savings</li>
-</ul>
-</section>
 </main>
-<aside class="sidebar-ad"></aside>
+<aside class="sidebar-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_SIDEBAR" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</aside>
 </div>
 
 <footer>
