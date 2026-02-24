@@ -85,28 +85,35 @@
 <main>
 <h1>শতাংশ ক্যালকুলেটর</h1>
 
-<section class="card">
-<h2>একটি অঙ্কের শতাংশ বের করুন</h2>
-<div class="inputs">
-<div><label>শতাংশ (%)</label><input id="p1" inputmode="decimal" placeholder="যেমন 25"></div>
-<div><label>পরিমাণ</label><input id="a1" inputmode="decimal" placeholder="যেমন 400"></div>
+<section class="inline-calcs">
+<div class="inline-row">
+<input id="p1" inputmode="decimal" placeholder="25">
+<span class="inline-label">% এর</span>
+<input id="a1" inputmode="decimal" placeholder="400">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r1" data-example="100" data-template="{R}">100</span>
 </div>
-<div class="result" id="r1" data-example="25% এর 400 = 100" data-template="<div class='nl'>{V1}% এর {V2} = <b>{R}</b></div>"></div>
+<div class="inline-row">
+<input id="x2" inputmode="decimal" placeholder="400">
+<span class="inline-label">হলো</span>
+<input id="y2" inputmode="decimal" placeholder="500">
+<span class="inline-label">এর কত % =</span>
+<span class="inline-result example-result" id="r2" data-example="80%" data-template="{R}%">80%</span>
+</div>
+<div class="inline-row">
+<span class="inline-label">% পরিবর্তন</span>
+<input id="o5" inputmode="decimal" placeholder="200">
+<span class="inline-label">থেকে</span>
+<input id="n5" inputmode="decimal" placeholder="250">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r5" data-example="25%" data-template="{R}%">25%</span>
+</div>
 </section>
 
 <div class="ad-slot ad-after-calculator">
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
-<section class="card">
-<h2>একটি সংখ্যার শতাংশ</h2>
-<div class="inputs">
-<div><label>মান</label><input id="x2" inputmode="decimal" placeholder="যেমন 400"></div>
-<div><label>মোট</label><input id="y2" inputmode="decimal" placeholder="যেমন 500"></div>
-</div>
-<div class="result" id="r2" data-example="400 হলো 500 এর 80%" data-template="<div class='nl'>{V1} হলো {V2} এর <b>{R}%</b></div>"></div>
-</section>
 
 <section class="card">
 <h2>ডিসকাউন্ট ক্যালকুলেটর</h2>
@@ -124,15 +131,6 @@
 <div><label>মূল দাম</label><input id="a4" inputmode="decimal" placeholder="যেমন 1000"></div>
 </div>
 <div class="result" id="r4" data-example="15% বৃদ্ধি = 1150" data-template="<div class='nl'>{V1}% বৃদ্ধি = <b>{R}</b></div>"></div>
-</section>
-
-<section class="card">
-<h2>শতাংশ বৃদ্ধি বা হ্রাস</h2>
-<div class="inputs">
-<div><label>পুরনো মান</label><input id="o5" inputmode="decimal" placeholder="যেমন 500"></div>
-<div><label>নতুন মান</label><input id="n5" inputmode="decimal" placeholder="যেমন 650"></div>
-</div>
-<div class="result" id="r5" data-example="500 → 650 = 30%" data-template="<div class='nl'>{V1} → {V2} = <b>{R}%</b></div>"></div>
 </section>
 
 <section class="card">

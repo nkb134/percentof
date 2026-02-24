@@ -141,28 +141,35 @@
 <main>
 <h1>प्रतिशत कैलकुलेटर</h1>
 
-<section class="card">
-<h2>राशि का प्रतिशत निकालें</h2>
-<div class="inputs">
-<div><label>प्रतिशत (%)</label><input id="p1" inputmode="decimal" placeholder="उदा. 25"></div>
-<div><label>राशि</label><input id="a1" inputmode="decimal" placeholder="उदा. 400"></div>
+<section class="inline-calcs">
+<div class="inline-row">
+<input id="p1" inputmode="decimal" placeholder="25">
+<span class="inline-label">% का</span>
+<input id="a1" inputmode="decimal" placeholder="400">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r1" data-example="100" data-template="{R}">100</span>
 </div>
-<div class="result" id="r1" data-example="25% का 400 = 100" data-template="<div class='nl'>{V1}% का {V2} = <b>{R}</b></div>"></div>
+<div class="inline-row">
+<input id="x2" inputmode="decimal" placeholder="400">
+<span class="inline-label">का</span>
+<input id="y2" inputmode="decimal" placeholder="500">
+<span class="inline-label">में कितना % =</span>
+<span class="inline-result example-result" id="r2" data-example="80%" data-template="{R}%">80%</span>
+</div>
+<div class="inline-row">
+<span class="inline-label">% बदलाव</span>
+<input id="o5" inputmode="decimal" placeholder="200">
+<span class="inline-label">से</span>
+<input id="n5" inputmode="decimal" placeholder="250">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r5" data-example="25%" data-template="{R}%">25%</span>
+</div>
 </section>
 
 <div class="ad-slot ad-after-calculator">
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
-<section class="card">
-<h2>किसी संख्या का प्रतिशत</h2>
-<div class="inputs">
-<div><label>मान</label><input id="x2" inputmode="decimal" placeholder="उदा. 400"></div>
-<div><label>कुल</label><input id="y2" inputmode="decimal" placeholder="उदा. 500"></div>
-</div>
-<div class="result" id="r2" data-example="400, 500 का 80% है" data-template="<div class='nl'>{V1}, {V2} का <b>{R}%</b> है</div>"></div>
-</section>
 
 <section class="card">
 <h2>डिस्काउंट कैलकुलेटर</h2>
@@ -180,15 +187,6 @@
 <div><label>मूल कीमत</label><input id="a4" inputmode="decimal" placeholder="उदा. 1000"></div>
 </div>
 <div class="result" id="r4" data-example="15% वृद्धि पर 1000 = 1150" data-template="<div class='nl'>{V1}% वृद्धि पर मूल्य <b>{R}</b></div>"></div>
-</section>
-
-<section class="card">
-<h2>प्रतिशत बढ़ोतरी या कमी</h2>
-<div class="inputs">
-<div><label>पुरानी राशि</label><input id="o5" inputmode="decimal" placeholder="उदा. 500"></div>
-<div><label>नई राशि</label><input id="n5" inputmode="decimal" placeholder="उदा. 650"></div>
-</div>
-<div class="result" id="r5" data-example="500 से 650 = 30%" data-template="<div class='nl'>{V1} से {V2} = <b>{R}%</b></div>"></div>
 </section>
 
 <section class="card">
