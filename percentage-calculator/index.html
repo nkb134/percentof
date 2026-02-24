@@ -186,30 +186,42 @@
 <main>
 <h1>Percentage Calculator</h1>
 
-<!-- X% of Y -->
-<section class="card">
-<h2>Find percentage of an amount</h2>
-<div class="inputs">
-<div><label>Percentage (%)</label><input id="p1" inputmode="decimal" placeholder="e.g. 25"></div>
-<div><label>Amount</label><input id="a1" inputmode="decimal" placeholder="e.g. 400"></div>
+<!-- Inline Calculators -->
+<section class="inline-calcs">
+<!-- Calculator 1: X% of Y -->
+<div class="inline-row">
+<span class="inline-label">What is</span>
+<input id="p1" inputmode="decimal" placeholder="25">
+<span class="inline-label">% of</span>
+<input id="a1" inputmode="decimal" placeholder="400">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r1" data-example="100" data-template="{R}">100</span>
 </div>
-<div class="result" id="r1" data-example="25% of 400 is 100" data-template="<div class='nl'><span class='pill'>{V1}%</span> of <span class='pill'>{V2}</span> is <b>{R}</b></div>"></div>
+
+<!-- Calculator 2: X is what % of Y -->
+<div class="inline-row">
+<input id="x2" inputmode="decimal" placeholder="400">
+<span class="inline-label">is what % of</span>
+<input id="y2" inputmode="decimal" placeholder="500">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r2" data-example="80%" data-template="{R}%">80%</span>
+</div>
+
+<!-- Calculator 3: % change from X to Y -->
+<div class="inline-row">
+<span class="inline-label">% change from</span>
+<input id="o5" inputmode="decimal" placeholder="200">
+<span class="inline-label">to</span>
+<input id="n5" inputmode="decimal" placeholder="250">
+<span class="inline-label">=</span>
+<span class="inline-result example-result" id="r5" data-example="25%" data-template="{R}%">25%</span>
+</div>
 </section>
 
 <div class="ad-slot ad-after-calculator">
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
-<!-- What % is X of Y -->
-<section class="card">
-<h2>What percentage is one number of another?</h2>
-<div class="inputs">
-<div><label>Value</label><input id="x2" inputmode="decimal" placeholder="e.g. 400"></div>
-<div><label>Total</label><input id="y2" inputmode="decimal" placeholder="e.g. 500"></div>
-</div>
-<div class="result" id="r2" data-example="400 out of 500 is 80%" data-template="<div class='nl'><span class='pill'>{V1}</span> out of <span class='pill'>{V2}</span> is <b>{R}%</b></div>"></div>
-</section>
 
 <!-- Calculator Hub -->
 <section class="content">

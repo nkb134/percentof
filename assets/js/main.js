@@ -56,11 +56,32 @@
 
     const example = result.dataset.example || '';
     const template = result.dataset.template || '';
+    const isInline = result.classList.contains('inline-result');
 
     const calculate = () => {
       const v1 = input1.value;
       const v2 = input2.value;
 
+      if (isInline) {
+        // Inline calculator mode
+        if (!v1 && !v2) {
+          // Show greyed-out example
+          result.textContent = example;
+          result.classList.add('example-result');
+          return;
+        }
+        if (!v1 || !v2) {
+          result.textContent = '?';
+          result.classList.add('example-result');
+          return;
+        }
+        const calcResult = fmt(cfg.calc(parseFloat(v1), parseFloat(v2)));
+        result.textContent = template.replace('{V1}', v1).replace('{V2}', v2).replace('{R}', calcResult);
+        result.classList.remove('example-result');
+        return;
+      }
+
+      // Card-style calculator mode (specialized pages)
       // Show example when both empty
       if (!v1 && !v2) {
         result.innerHTML = example ? `<div class="example">${example}</div>` : '';
@@ -191,15 +212,19 @@
   }
 
   // Inject Copy + WhatsApp Share buttons inside result divs
-  // We use a MutationObserver to detect when results are rendered
+  // We use a MutationObserver with a guard flag to prevent infinite loops
   document.querySelectorAll('.result').forEach(resultDiv => {
+    let updating = false;
     const observer = new MutationObserver(() => {
+      if (updating) return;
+      updating = true;
+
       // Remove old action buttons
       const oldActions = resultDiv.querySelector('.result-actions');
       if (oldActions) oldActions.remove();
 
       const nlEl = resultDiv.querySelector('.nl');
-      if (!nlEl) return; // No result yet (example or empty)
+      if (!nlEl) { updating = false; return; } // No result yet
 
       const actions = document.createElement('div');
       actions.className = 'result-actions';
@@ -221,7 +246,6 @@
             }, 1500);
           });
         } else {
-          // Fallback
           const ta = document.createElement('textarea');
           ta.value = text;
           ta.style.position = 'fixed';
@@ -253,6 +277,7 @@
       actions.appendChild(shareBtn);
 
       resultDiv.appendChild(actions);
+      updating = false;
     });
 
     observer.observe(resultDiv, { childList: true, subtree: true });
