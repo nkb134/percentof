@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-20Y5F7DX7X"></script>
@@ -14,25 +18,25 @@
   </script>
 
   <!-- Title & Description -->
-  <title>Percentof – Percentage Calculator</title>
-  <meta name="description" content="Free online percentage calculator for discount, GST, salary hike, marks and more.">
+  <title>Percentage Calculator Online — Free & Instant | Percentof</title>
+  <meta name="description" content="Free online percentage calculator. Calculate percentage of any number, discounts, GST, salary hike, EMI and more. Instant results with step-by-step solutions.">
 
   <!-- SEO -->
-  <link rel="canonical" href="https://percentof.in/percentage-calculator/">
+  <link rel="canonical" href="https://percentof.in/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Percentof – Percentage Calculator">
-  <meta property="og:description" content="Free online percentage calculator for discount, GST, salary hike, marks and more.">
-  <meta property="og:image" content="https://percentof.in/og-image.png">
-  <meta property="og:url" content="https://percentof.in/percentage-calculator/">
+  <meta property="og:title" content="Percentage Calculator Online — Free & Instant | Percentof">
+  <meta property="og:description" content="Free online percentage calculator. Calculate percentage of any number, discounts, GST, salary hike, EMI and more.">
+  <meta property="og:image" content="https://percentof.in/og-image.jpg">
+  <meta property="og:url" content="https://percentof.in/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percentof – Percentage Calculator">
-  <meta name="twitter:description" content="Free online percentage calculator for discount, GST, salary hike, marks and more.">
-  <meta name="twitter:image" content="https://percentof.in/og-image.png">
+  <meta name="twitter:title" content="Percentage Calculator Online — Free & Instant | Percentof">
+  <meta name="twitter:description" content="Free online percentage calculator. Calculate percentage of any number, discounts, GST, salary hike, EMI and more.">
+  <meta name="twitter:image" content="https://percentof.in/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
@@ -44,15 +48,205 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0ea5e9">
 
-  <!-- Redirect -->
-  <meta http-equiv="refresh" content="0; url=/percentage-calculator/">
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
+
+  <!-- Calculator Script -->
+  <script src="/assets/js/main.min.js" defer></script>
+
+  <!-- Schema: Organization -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Percentof",
+  "url": "https://percentof.in",
+  "logo": "https://percentof.in/android-chrome-512x512.png",
+  "description": "Free online percentage calculator for discount, GST, salary hike, marks and more."
+}
+</script>
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Percentof",
+  "url": "https://percentof.in",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://percentof.in/percentage-calculator/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5874718379352488"
      crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <h1>Percentage Calculator</h1>
-  <p>Redirecting…</p>
+<header>
+<div class="header">
+<div class="logo"><span>%</span>Percentof</div>
+<div class="tabs">
+<a class="active" href="/">English</a>
+<a href="/hi/percentage-calculator">हिन्दी</a>
+<a href="/te/percentage-calculator">తెలుగు</a>
+<a href="/ta/percentage-calculator">தமிழ்</a>
+<a href="/bn/percentage-calculator">বাংলা</a>
+</div>
+</div>
+</header>
+
+<div class="layout">
+<main>
+<h1>Percentage Calculator Online — Free & Instant</h1>
+
+<p>Calculate any percentage instantly. Enter the percentage and amount below to get your result. Use our specialized calculators for discounts, GST, salary hikes, EMI, SIP returns, and more.</p>
+
+<!-- X% of Y -->
+<section class="card">
+<h2>Find percentage of an amount</h2>
+<div class="inputs">
+<div><label>Percentage (%)</label><input id="p1" inputmode="decimal" placeholder="e.g. 25"></div>
+<div><label>Amount</label><input id="a1" inputmode="decimal" placeholder="e.g. 400"></div>
+</div>
+<div class="result" id="r1" data-example="25% of 400 is 100" data-template="<div class='nl'><span class='pill'>{V1}%</span> of <span class='pill'>{V2}</span> is <b>{R}</b></div>"></div>
+</section>
+
+<div class="ad-slot ad-after-calculator">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_AFTER_CALC" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- What % is X of Y -->
+<section class="card">
+<h2>What percentage is one number of another?</h2>
+<div class="inputs">
+<div><label>Value</label><input id="x2" inputmode="decimal" placeholder="e.g. 400"></div>
+<div><label>Total</label><input id="y2" inputmode="decimal" placeholder="e.g. 500"></div>
+</div>
+<div class="result" id="r2" data-example="400 out of 500 is 80%" data-template="<div class='nl'><span class='pill'>{V1}</span> out of <span class='pill'>{V2}</span> is <b>{R}%</b></div>"></div>
+</section>
+
+<!-- Calculator Hub -->
+<section class="content">
+<h2>All Calculators</h2>
+<div class="calculator-grid">
+<a class="calc-card" href="/percentage-calculator/">
+<span class="card-icon">🔢</span>
+<div class="card-info">
+<div class="card-name">Percentage Calculator</div>
+<div class="card-desc">All percentage calculations</div>
+</div>
+</a>
+<a class="calc-card" href="/discount-calculator/">
+<span class="card-icon">💰</span>
+<div class="card-info">
+<div class="card-name">Discount Calculator</div>
+<div class="card-desc">Find sale price after discount</div>
+</div>
+</a>
+<a class="calc-card" href="/gst-calculator/">
+<span class="card-icon">📊</span>
+<div class="card-info">
+<div class="card-name">GST Calculator</div>
+<div class="card-desc">Calculate GST at 5%, 12%, 18%, 28%</div>
+</div>
+</a>
+<a class="calc-card" href="/salary-hike-calculator/">
+<span class="card-icon">💼</span>
+<div class="card-info">
+<div class="card-name">Salary Hike</div>
+<div class="card-desc">New salary after increment</div>
+</div>
+</a>
+<a class="calc-card" href="/percentage-increase-calculator/">
+<span class="card-icon">📈</span>
+<div class="card-info">
+<div class="card-name">% Increase</div>
+<div class="card-desc">Value after percentage increase</div>
+</div>
+</a>
+<a class="calc-card" href="/percentage-decrease-calculator/">
+<span class="card-icon">📉</span>
+<div class="card-info">
+<div class="card-name">% Decrease</div>
+<div class="card-desc">Value after percentage decrease</div>
+</div>
+</a>
+<a class="calc-card" href="/emi-impact-calculator/">
+<span class="card-icon">🏦</span>
+<div class="card-info">
+<div class="card-name">EMI Calculator</div>
+<div class="card-desc">Monthly EMI for loans</div>
+</div>
+</a>
+<a class="calc-card" href="/sip-growth-calculator/">
+<span class="card-icon">📱</span>
+<div class="card-info">
+<div class="card-name">SIP Growth</div>
+<div class="card-desc">Mutual fund SIP returns</div>
+</div>
+</a>
+<a class="calc-card" href="/cashback-value-calculator/">
+<span class="card-icon">🎁</span>
+<div class="card-info">
+<div class="card-name">Cashback</div>
+<div class="card-desc">Calculate cashback rewards</div>
+</div>
+</a>
+</div>
+</section>
+
+<!-- Popular Calculations -->
+<section class="content">
+<h2>Popular Calculations</h2>
+<div class="popular-grid">
+<a href="/what-is-10-percent-of-1000/">10% of 1,000</a>
+<a href="/what-is-20-percent-of-5000/">20% of 5,000</a>
+<a href="/what-is-25-percent-of-400/">25% of 400</a>
+<a href="/what-is-50-percent-of-1000/">50% of 1,000</a>
+<a href="/what-is-18-percent-of-1000/">18% of 1,000</a>
+<a href="/what-is-10-percent-of-50000/">10% of 50,000</a>
+<a href="/what-is-15-percent-of-5000/">15% of 5,000</a>
+<a href="/what-is-75-percent-of-1000/">75% of 1,000</a>
+<a href="/what-is-5-percent-of-10000/">5% of 10,000</a>
+<a href="/what-is-30-percent-of-2000/">30% of 2,000</a>
+<a href="/what-is-12-percent-of-1000/">12% of 1,000</a>
+<a href="/what-is-20-percent-of-10000/">20% of 10,000</a>
+</div>
+</section>
+
+<!-- Brief Intro -->
+<section class="content">
+<h2>How to Calculate Percentage</h2>
+<p>A percentage is a number expressed as a fraction of 100. To calculate a percentage of any number, multiply the number by the percentage and divide by 100. For example, 25% of 400 = (25 × 400) ÷ 100 = 100.</p>
+<p>To find what percentage one number is of another, divide the first number by the second and multiply by 100. For example, 400 out of 500 = (400 ÷ 500) × 100 = 80%.</p>
+<p>Our free online calculators handle all types of percentage calculations — from simple "what is X% of Y" to specialized computations like GST, discounts, salary hikes, loan EMI, and SIP returns. All results are instant with no sign-up required.</p>
+</section>
+
+</main>
+<aside class="sidebar-ad">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5874718379352488" data-ad-slot="TODO_SIDEBAR" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</aside>
+</div>
+
+<footer>
+<div class="footer">
+<div class="footer-links">
+<a href="/about/">About</a>
+<a href="/privacy-policy/">Privacy Policy</a>
+<a href="/terms-of-service/">Terms of Service</a>
+<a href="/contact/">Contact</a>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+<div class="footer-copy">&copy; 2025 Percentof. All rights reserved.</div>
+</div>
+</footer>
+
 </body>
 </html>

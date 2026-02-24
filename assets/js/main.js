@@ -258,4 +258,23 @@
     observer.observe(resultDiv, { childList: true, subtree: true });
   });
 
+  // --- Query Parameter Auto-Fill ---
+  // Handles ?q=25+percent+of+400 or ?q=25%25+of+400
+  // Pre-fills calculator inputs on homepage/calculator pages
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) {
+    // Match patterns: "X% of Y", "X percent of Y", "what is X% of Y"
+    const match = q.match(/(?:what\s+is\s+)?(\d+(?:\.\d+)?)\s*(?:%|percent)\s*(?:of)\s*(\d+(?:\.\d+)?)/i);
+    if (match) {
+      const pInput = $('p1');
+      const aInput = $('a1');
+      if (pInput && aInput) {
+        pInput.value = match[1];
+        aInput.value = match[2];
+        pInput.dispatchEvent(new Event('input'));
+      }
+    }
+  }
+
 })();

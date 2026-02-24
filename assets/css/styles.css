@@ -398,6 +398,146 @@ footer {
   color: var(--accent);
 }
 
+/* Answer Hero (long-tail pages) */
+.answer-hero {
+  background: linear-gradient(135deg, var(--accent), #0284c7);
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.answer-hero .answer-value {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.answer-hero .answer-label {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Quick-Answer / Related Calculations Table */
+.quick-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.quick-table th,
+.quick-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.quick-table th {
+  background: var(--surface);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.quick-table td {
+  font-size: 15px;
+}
+
+.quick-table tr:last-child td {
+  border-bottom: none;
+}
+
+.quick-table td:last-child {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.quick-table a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.quick-table a:hover {
+  text-decoration: underline;
+}
+
+/* Step-by-step solution */
+.step-box {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+.step-box .step {
+  margin-bottom: 12px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.step-box .step:last-child {
+  margin-bottom: 0;
+}
+
+.step-box .step-num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+/* Popular Calculations Grid */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.popular-grid a {
+  display: block;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.popular-grid a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .header {
@@ -439,5 +579,23 @@ footer {
 
   .calc-card .card-desc {
     font-size: 12px;
+  }
+
+  .answer-hero .answer-value {
+    font-size: 36px;
+  }
+
+  .answer-hero {
+    padding: 24px 16px;
+  }
+
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-table th,
+  .quick-table td {
+    padding: 10px 12px;
+    font-size: 14px;
   }
 }
